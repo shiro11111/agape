@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { EventUtil } from './shared/utils/event.util';
+import { ParishUtil } from './shared/utils/parish.util';
 import { Parish } from '../models/parish';
 
 @Injectable({
   providedIn: 'root'
 })
 
-export class EventsService {
+export class ParishService {
   loadParish(): Observable<Parish> {
-    return of(EventUtil.getParish());
+    return of(ParishUtil.getParish());
   }
 }
 

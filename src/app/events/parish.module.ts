@@ -2,20 +2,21 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreModule } from '@ngrx/store';
-import { EventsDetailsComponent } from './events-details/events-details.component';
-import { EventsListComponent } from './events-list/events-list.component';
+import { ParishPostsComponent } from './parish-posts/parish-posts.component';
+import { ParishDisplayComponent } from './parish-display/parish-display.component';
 
 @NgModule({
   declarations: [
-    EventsListComponent,
-    EventsDetailsComponent
+    ParishDisplayComponent,
+    ParishPostsComponent
   ],
-  imports[
+  imports: [
     CommonModule,
     StoreDevtoolsModule,
     StoreModule
   ]
-)}
+})
 
-export class EventsModule {}
+export class ParishModule {
+}
 

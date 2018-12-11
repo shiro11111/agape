@@ -1,6 +1,6 @@
 import { Parish } from '../../../models/parish';
 
-export class EventUtil {
+export class ParishUtil {
 
   static getParish(): Parish {
     return {

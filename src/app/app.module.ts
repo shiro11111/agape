@@ -4,21 +4,32 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { EventsListComponent } from './events/events-list/events-list.component';
-import { EventsDetailsComponent } from './events/events-details/events-details.component';
+import { ParishDisplayComponent } from './events/parish-display/parish-display.component';
+import { ParishPostsComponent } from './events/parish-posts/parish-posts.component';
+import { ParishService } from './events/parish.service';
+import { StoreModule } from '@ngrx/store';
+import { reducers } from './app.reducers';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { EffectsModule } from '@ngrx/effects';
+import { ParishEffects } from './events/parish.effects';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EventsListComponent,
-    EventsDetailsComponent
+    ParishDisplayComponent,
+    ParishPostsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    StoreModule.forRoot(reducers),
+    StoreDevtoolsModule.instrument(),
+    EffectsModule.forRoot([
+      ParishEffects
+    ]),
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [ParishService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
