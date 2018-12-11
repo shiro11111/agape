@@ -12,6 +12,7 @@ import { reducers } from './app.reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 import { ParishEffects } from './events/parish.effects';
+import { MatCardModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ParishEffects } from './events/parish.effects';
     EffectsModule.forRoot([
       ParishEffects
     ]),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatCardModule
   ],
   providers: [ParishService],
   bootstrap: [AppComponent]

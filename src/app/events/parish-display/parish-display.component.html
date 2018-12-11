@@ -1,1 +1,7 @@
-<pre>{{display$ | async | json}}</pre>
+<ng-container>
+  <mat-card>
+  <img
+    [src]="'https://api-agappe.deployflex.com/' + 'image/' +(display$ | async)?.image?.discriminator + '/' + (display$ | async)?.image?.imageName + '.' + (display$ | async)?.image?.extension">
+  <pre>{{display$ | async | json}}</pre>
+  </mat-card>
+</ng-container>
