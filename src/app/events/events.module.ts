@@ -10,7 +10,7 @@ import { EventsListComponent } from './events-list/events-list.component';
     EventsListComponent,
     EventsDetailsComponent
   ],
-  imports [
+  imports[
     CommonModule,
     StoreDevtoolsModule,
     StoreModule

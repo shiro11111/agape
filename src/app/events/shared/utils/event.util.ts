@@ -1,54 +1,46 @@
-import { ChurchEvent } from '../../../events-interface';
+import { Parish } from '../../../models/parish';
 
 export class EventUtil {
 
-  static getEventsList(): ChurchEvent[] {
-    return[
-      {
+  static getParish(): Parish {
+    return {
+      id: 1,
+      image: {
         id: 1,
-        parish: 'Parafia',
-        date: new Date(2018, 11, 3),
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a libero ac dolor blandit dictum. ' +
-          'In scelerisque, nunc sed ornare mollis.',
-        content: 'Lorem ipsum dolor sit amet, consectetur.',
-        thumbnail: 'https://kuria.pl/clients/_kuria/_upload/_koscioly/d11_053_KamieAN_Pom._par._Dziwnywek.jpg'
+        imageName: 'church',
+        imageSize: 22,
+        updatedAt: '2018-12-11',
+        extension: 'jpeg',
+        discriminator: 'parish'
       },
-      {
-        id: 2,
-        parish: 'Parafia',
-        date: new Date(2018, 11, 3),
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a libero ac dolor blandit dictum. ' +
-          'In scelerisque, nunc sed ornare mollis.',
-        content: 'Lorem ipsum dolor sit amet, consectetur.',
-        thumbnail: 'https://kuria.pl/clients/_kuria/_upload/_koscioly/d11_053_KamieAN_Pom._par._Dziwnywek.jpg'
+      iskkNumber: 1231,
+    name: 'assdfg',
+    dedicated: 'assd',
+    city: 'asddgfg',
+    street: '123',
+    buildingNumber: '12',
+    apartmentNumber: '123',
+    postCode: '12-343',
+    postCity: 'asdfg',
+    phoneNumber: '1213245',
+      deanery: {
+        id: 1,
+        name: 'Dekanat 2',
+        diocese: {
+          id: 1,
+          name: 'Diecezja 1'
+        }
       },
-      {
-        id: 3,
-        parish: 'Parafia',
-        date: new Date(2018, 11, 3),
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a libero ac dolor blandit dictum. ' +
-          'In scelerisque, nunc sed ornare mollis.',
-        content: 'Lorem ipsum dolor sit amet, consectetur.',
-        thumbnail: 'https://kuria.pl/clients/_kuria/_upload/_koscioly/d11_053_KamieAN_Pom._par._Dziwnywek.jpg'
+      parishType: {
+        id: 1,
+        name: 'Parafia'
       },
-      {
-        id: 4,
-        parish: 'Parafia',
-        date: new Date(2018, 11, 3),
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a libero ac dolor blandit dictum. ' +
-          'In scelerisque, nunc sed ornare mollis.',
-        content: 'Lorem ipsum dolor sit amet, consectetur.',
-        thumbnail: 'https://kuria.pl/clients/_kuria/_upload/_koscioly/d11_053_KamieAN_Pom._par._Dziwnywek.jpg'
-      },
-      {
-        id: 5,
-        parish: 'Parafia',
-        date: new Date(2018, 11, 3),
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a libero ac dolor blandit dictum. ' +
-          'In scelerisque, nunc sed ornare mollis.',
-        content: 'Lorem ipsum dolor sit amet, consectetur.',
-        thumbnail: 'https://kuria.pl/clients/_kuria/_upload/_koscioly/d11_053_KamieAN_Pom._par._Dziwnywek.jpg'
-      },
-    ];
+      province: {
+        id: 1,
+        name: 'Lubelskie',
+        code: 6
+      }
+    };
   }
 }
+

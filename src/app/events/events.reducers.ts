@@ -1,29 +1,27 @@
-import { ChurchEvent } from '../events-interface';
-import { EventsActions, LOAD_EVENTS_LIST, LOAD_EVENTS_LIST_FAIL, LOAD_EVENTS_LIST_SUCCESS } from './events.actions';
+import { Parish } from '../models/parish';
+import { ParishActions } from './events.actions';
 
-export interface EventsState {
-  list: ChurchEvent[];
-  details: ChurchEvent;
+export interface ParishState {
+ display: Parish;
 }
 
-const initialState: EventsState = {
-  list: [],
-  details: null
+const initialState: ParishState = {
+  display: null
 };
 
-export function eventsReducer(state = initialState, action: EventsActions) {
+export function parishReducer(state = initialState, action: ParishActions) {
   switch (action.type) {
-    case LOAD_EVENTS_LIST:
+    case 'LOAD_PARISH':
       return {
         ...state,
-        list: []
+        display: null
       };
-    case LOAD_EVENTS_LIST_SUCCESS:
+    case 'LOAD_PARISHSUCCESS':
       return {
         ...state,
-        list: action.payload
+        display: action.payload
       };
-    case LOAD_EVENTS_LIST_FAIL:
+    case 'LOAD_PARISH_FAIL':
       return {
         ...state,
       };

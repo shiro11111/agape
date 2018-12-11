@@ -1,24 +1,25 @@
 import { Action } from '@ngrx/store';
-import { ChurchEvent } from '../events-interface';
-
-export const LOAD_EVENTS_LIST = 'LOAD_EVENTS_LIST';
-export const LOAD_EVENTS_LIST_SUCCESS = 'LOAD_EVENTS_LIST_SUCCESS';
-export const LOAD_EVENTS_LIST_FAIL = 'LOAD_EVENTS_LIST_FAIL';
+import { Parish } from '../models/parish';
 
 
-export class LoadEventsList implements Action {
-  readonly type = LOAD_EVENTS_LIST;
+export const LOAD_PARISH = 'LOAD_PARISH';
+export const LOAD_PARISH_SUCCESS = 'LOAD_PARISHSUCCESS';
+export const LOAD_PARISH_FAIL = 'LOAD_PARISH_FAIL';
+
+
+export class LoadParish implements Action {
+  readonly type = LOAD_PARISH;
 }
 
-export class LoadEventsListSuccess implements Action {
-  readonly type = LOAD_EVENTS_LIST_SUCCESS;
+export class LoadParishSuccess implements Action {
+  readonly type = LOAD_PARISH_SUCCESS;
 
-  constructor(public payload: ChurchEvent[]) {}
+  constructor(public payload: Parish) {}
 }
 
-export class LoadEventsListFail implements Action {
-  readonly type = LOAD_EVENTS_LIST_FAIL;
+export class LoadParishFail implements Action {
+  readonly type = LOAD_PARISH_FAIL;
 }
 
-export type EventsActions = LoadEventsList | LoadEventsListSuccess | LoadEventsListFail;
+export type ParishActions = LoadParish | LoadParishSuccess | LoadParishFail;
 
