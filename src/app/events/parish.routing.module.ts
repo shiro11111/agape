@@ -14,7 +14,6 @@ const routes: Routes = [
     pathMatch: 'full',
     component: ParishMainComponent,
     children: [
-      { path: '', redirectTo: 'main' },
       { path: 'main', pathMatch: 'full', component: ParishPostsComponent}
     ]
   },
