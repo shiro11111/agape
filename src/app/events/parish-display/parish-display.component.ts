@@ -6,6 +6,7 @@ import { map } from 'rxjs/operators';
 import { ParishState } from '../parish.reducers';
 import { Parish } from '../../models/parish';
 import { AppState } from '../../app.reducers';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-parish-display',
@@ -15,7 +16,9 @@ import { AppState } from '../../app.reducers';
 export class ParishDisplayComponent implements OnInit {
   display$: Observable<Parish>;
 
-  constructor(private store: Store<AppState>) { }
+  constructor(private store: Store<AppState>, private router: Router,
+              private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
     this.store.dispatch(new LoadParish());

@@ -14,7 +14,7 @@ export class ParishUtil {
         discriminator: 'parish'
       },
       iskkNumber: 1231,
-      name: 'assdfg',
+      name: 'Parafia św. Łazarza',
       dedicated: 'assd',
       city: 'asddgfg',
       street: '123',

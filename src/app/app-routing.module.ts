@@ -4,13 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'posts',
     pathMatch: 'full'
   },
   {
-    path: 'dashboard',
+    path: 'posts',
     loadChildren: './events/parish.module#ParishModule'
-  }
+  },
 ];
 
 @NgModule({

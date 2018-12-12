@@ -1,19 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { StoreModule } from '@ngrx/store';
 import { ParishPostsComponent } from './parish-posts/parish-posts.component';
 import { ParishDisplayComponent } from './parish-display/parish-display.component';
-import { MatCardModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatIconModule, MatTabsModule, MatToolbarModule } from '@angular/material';
+import { ParishMainComponent } from './parish-main/parish-main.component';
+import { ParishRoutingModule } from './parish.routing.module';
 
 @NgModule({
   declarations: [
-    MatCardModule,
     ParishDisplayComponent,
-    ParishPostsComponent
+    ParishPostsComponent,
+    ParishMainComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatCardModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatTabsModule,
+    ParishRoutingModule
   ]
 })
 

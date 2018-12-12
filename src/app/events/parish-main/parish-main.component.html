@@ -1,0 +1,21 @@
+<!--tu wsadzić tabsy z nawigacją (https://material.angular.io/components/tabs/overview#tabs-and-navigation)-->
+<!--<mat-tab-group>-->
+  <!--<nav mat-tab-nav-bar>-->
+    <!--<a mat-tab-link-->
+       <!--*ngFor="let link of navLinks"-->
+       <!--[routerLink]="link.path"-->
+       <!--routerLinkActive #rla="routerLinkActive"-->
+       <!--[active]="rla.isActive">-->
+      <!--{{link.label}} fsfdsfds-->
+    <!--</a>-->
+  <!--</nav>-->
+<!--</mat-tab-group>-->
+<nav mat-tab-nav-bar>
+  <a mat-tab-link *ngFor="let link of navLinks"
+     routerLinkActive #rla="routerLinkActive"
+     [routerLink]="link.path"
+     [active]="rla.isActive"> {{link.label}} </a>
+</nav>
+
+<app-parish-display></app-parish-display>
+<router-outlet></router-outlet>

@@ -1,7 +1,8 @@
 <ng-container>
   <mat-card>
-  <img
-    [src]="'https://api-agappe.deployflex.com/' + 'image/' +(display$ | async)?.image?.discriminator + '/' + (display$ | async)?.image?.imageName + '.' + (display$ | async)?.image?.extension">
-  <pre>{{display$ | async | json}}</pre>
+  <img class="app-responsive-details-item"
+      [src]="'https://api-agappe.deployflex.com/' + 'image/' +(display$ | async)?.image?.discriminator + '/' + (display$ | async)?.image?.imageName + '.' + (display$ | async)?.image?.extension">
+    <div>{{ (display$ | async)?.name }}</div>
+  <!--<pre>{{display$ | async | json}}</pre>-->
   </mat-card>
 </ng-container>
