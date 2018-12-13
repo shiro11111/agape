@@ -1,12 +1,23 @@
 import { Parish } from '../models/parish';
-import { LOAD_PARISH, LOAD_PARISH_FAIL, LOAD_PARISH_SUCCESS, ParishActions } from './parish.actions';
+import {
+  LOAD_PARISH,
+  LOAD_PARISH_FAIL,
+  LOAD_PARISH_SUCCESS,
+  LOAD_POSTS_LIST, LOAD_POSTS_LIST_FAIL,
+  LOAD_POSTS_LIST_SUCCESS,
+  ParishActions
+} from './parish.actions';
+import { List } from '../models/list';
+import { Post } from '../models/post';
 
 export interface ParishState {
  display: Parish;
+ list: List<Post>;
 }
 
 const initialState: ParishState = {
-  display: null
+  display: null,
+  list: null
 };
 
 export function parishReducer(state = initialState, action: ParishActions) {
@@ -24,6 +35,19 @@ export function parishReducer(state = initialState, action: ParishActions) {
     case LOAD_PARISH_FAIL:
       return {
         ...state,
+      };
+    case LOAD_POSTS_LIST:
+      return {
+        ...state,
+      };
+    case LOAD_POSTS_LIST_SUCCESS:
+      return {
+        ...state,
+        list: action.payload
+      };
+    case LOAD_POSTS_LIST_FAIL:
+      return {
+        ...state
       };
     default:
       return {

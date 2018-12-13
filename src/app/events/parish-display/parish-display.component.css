@@ -1,6 +1,7 @@
 .app-responsive-details-item {
   width: 100%;
   max-height: 45vh;
+  object-fit: cover;
 }
 
 

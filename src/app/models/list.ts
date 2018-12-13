@@ -3,4 +3,3 @@ export interface List<T> {
   items: T[];
 }
 
-// List<Post>

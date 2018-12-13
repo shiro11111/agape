@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ParishPostsComponent } from './parish-posts/parish-posts.component';
 import { ParishDisplayComponent } from './parish-display/parish-display.component';
-import { MatButtonModule, MatCardModule, MatIconModule, MatTabsModule, MatToolbarModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatExpansionModule, MatIconModule, MatTabsModule, MatToolbarModule } from '@angular/material';
 import { ParishMainComponent } from './parish-main/parish-main.component';
 import { ParishRoutingModule } from './parish.routing.module';
 
@@ -19,6 +19,7 @@ import { ParishRoutingModule } from './parish.routing.module';
     MatButtonModule,
     MatIconModule,
     MatTabsModule,
+    MatExpansionModule,
     ParishRoutingModule
   ]
 })

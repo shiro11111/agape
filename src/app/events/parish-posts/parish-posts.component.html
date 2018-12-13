@@ -1,3 +1,13 @@
-<p>
-  wydarzenia-details works!
-</p>
+<!--<pre>{{list$ | async | json}}</pre>-->
+
+<ng-container *ngIf="(list$ | async)">
+  <mat-card *ngFor="let item of (list$ | async)?.items">
+    <img class="post-img" [src] = "'https://api-agappe.deployflex.com/' + 'image/' + item?.parish?.image?.discriminator + '/' + item?.parish?.image?.imageName + '.' + item?.parish?.image?.extension">
+    <div>{{ item?.parish.name }} </div>
+    <div>{{ item?.createdAt}}</div>
+    <div>{{ item?.description }} </div>
+
+
+
+  </mat-card>
+</ng-container>

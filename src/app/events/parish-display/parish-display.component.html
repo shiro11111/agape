@@ -1,8 +1,17 @@
-<ng-container>
-  <mat-card>
+<mat-card class="p-0">
   <img class="app-responsive-details-item"
-      [src]="'https://api-agappe.deployflex.com/' + 'image/' +(display$ | async)?.image?.discriminator + '/' + (display$ | async)?.image?.imageName + '.' + (display$ | async)?.image?.extension">
-    <div>{{ (display$ | async)?.name }}</div>
+       [src]="'https://api-agappe.deployflex.com/' + 'image/' +(display$ | async)?.image?.discriminator + '/' + (display$ | async)?.image?.imageName + '.' + (display$ | async)?.image?.extension">
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <div>{{ (display$ | async)?.name }}</div>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>Lublin ul. XXX </p>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <!--<div>{{ (display$ | async)?.name }}</div>-->
   <!--<pre>{{display$ | async | json}}</pre>-->
-  </mat-card>
-</ng-container>
+</mat-card>
+<app-parish-posts></app-parish-posts>
