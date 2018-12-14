@@ -1,6 +1,7 @@
 import { Parish } from '../../../models/parish';
 import { Post } from '../../../models/post';
 import { List } from '../../../models/list';
+import { Community } from '../../../models/community';
 
 export class ParishUtil {
 
@@ -48,6 +49,7 @@ export class ParishUtil {
   static getPostsList(): List<Post> {
     return {
       maxResults: '2',
+      subscriptions: [1, 2, 3, 4],
       items: [
         {
           id: 1,
@@ -132,6 +134,21 @@ export class ParishUtil {
             city: 'Lublin'
           },
           community: null
+        }
+      ]
+    };
+  }
+  getCommunity(): List<Community> {
+    return {
+      maxResults: '27',
+      subscriptions: [1, 2, 3, 4],
+      items: [
+        {
+          id: 1,
+          description: 'alskldkdjhdd',
+          createdAt: '14-12-2018',
+          name: ''
+
         }
       ]
     };

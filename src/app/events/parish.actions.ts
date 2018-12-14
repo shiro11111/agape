@@ -3,6 +3,7 @@ import { Parish } from '../models/parish';
 import { HttpErrorResponse } from '@angular/common/http';
 import { List } from '../models/list';
 import { Post } from '../models/post';
+import { Community } from '../models/community';
 
 
 export const LOAD_PARISH = 'LOAD_PARISH';
@@ -11,6 +12,9 @@ export const LOAD_PARISH_FAIL = 'LOAD_PARISH_FAIL';
 export const LOAD_POSTS_LIST = 'LOAD_POSTS_LIST';
 export const LOAD_POSTS_LIST_SUCCESS = 'LOAD_POSTS_LIST_SUCCESS';
 export const LOAD_POSTS_LIST_FAIL = 'LOAD_POSTS_LIST_FAIL';
+export const LOAD_COMMUNITY_POSTS = 'LOAD_COMMUNITY_POSTS';
+export const LOAD_COMMUNITY_POSTS_SUCCESS = 'LOAD_COMMUNITY_POSTS_SUCCESS';
+export const LOAD_COMMUNITY_POSTS_FAIL = 'LOAD_COMMUNITY_POSTS_FAIL';
 
 
 
@@ -46,5 +50,23 @@ export class LoadPostsListFail implements Action {
   constructor(public payload: HttpErrorResponse) {}
 }
 
-export type ParishActions = LoadParish | LoadParishSuccess | LoadParishFail | LoadPostsList | LoadPostsListSuccess | LoadPostsListFail;
+export class LoadCommunityPosts implements Action {
+  readonly type = LOAD_COMMUNITY_POSTS;
+}
+
+export class LoadCommunityPostsSuccess implements Action {
+  readonly type = LOAD_COMMUNITY_POSTS_SUCCESS;
+
+  constructor(public payload: List<Community>) {}
+}
+
+export class LoadCommunityPostsFail implements Action {
+  readonly type = LOAD_COMMUNITY_POSTS_FAIL;
+
+  constructor(public payload: HttpErrorResponse) {}
+}
+
+
+export type ParishActions = LoadParish | LoadParishSuccess | LoadParishFail | LoadPostsList | LoadPostsListSuccess | LoadPostsListFail |
+  LoadCommunityPosts | LoadCommunityPostsSuccess | LoadCommunityPostsFail;
 
