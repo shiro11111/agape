@@ -2,19 +2,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { ParishMainComponent } from './parish-main/parish-main.component';
 import { ParishPostsComponent } from './parish-posts/parish-posts.component';
+import { ParishCommunitiesComponent } from './parish-communities/parish-communities.component';
+import { ParishEventsComponent } from './parish-events/parish-events.component';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   pathMatch: 'full',
-  //   redirectTo: 'posts'
-  // },
   {
     path: '',
-    pathMatch: 'full',
     component: ParishMainComponent,
     children: [
-      { path: 'main', pathMatch: 'full', component: ParishPostsComponent}
+      { path: '', pathMatch: 'full', redirectTo: 'main' },
+      { path: 'main', component: ParishPostsComponent },
+      { path: 'communities', component: ParishCommunitiesComponent },
+      { path: 'events', component: ParishEventsComponent }
     ]
   },
 ];
@@ -24,4 +23,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 
-export class ParishRoutingModule {}
+export class ParishRoutingModule {
+}

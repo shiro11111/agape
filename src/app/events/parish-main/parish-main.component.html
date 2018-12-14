@@ -1,23 +1,11 @@
 <!--tu wsadzić tabsy z nawigacją (https://material.angular.io/components/tabs/overview#tabs-and-navigation)-->
-<!--<mat-tab-group>-->
-<!--<nav mat-tab-nav-bar>-->
-<!--<a mat-tab-link-->
-<!--*ngFor="let link of navLinks"-->
-<!--[routerLink]="link.path"-->
-<!--routerLinkActive #rla="routerLinkActive"-->
-<!--[active]="rla.isActive">-->
-<!--{{link.label}} fsfdsfds-->
-<!--</a>-->
-<!--</nav>-->
-<!--</mat-tab-group>-->
+
 <div>
-  <nav mat-tab-nav-bar class="app-navbar-with-menu">
-    <div>
-      <a mat-tab-link *ngFor="let link of navLinks"
-         routerLinkActive #rla="routerLinkActive"
-         [routerLink]="'/' + link.path"
-         [active]="rla.isActive"> {{link.label}}</a>
-    </div>
+  <nav mat-tab-nav-bar>
+    <a mat-tab-link *ngFor="let link of navLinks"
+       routerLinkActive #rla="routerLinkActive"
+       [routerLink]="link.path"
+       [active]="rla.isActive"> {{link.label}}</a>
     <!--<mat-icon>more_vert</mat-icon>-->
   </nav>
 </div>
