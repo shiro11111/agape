@@ -138,20 +138,153 @@ export class ParishUtil {
       ]
     };
   }
-  getCommunity(): List<Community> {
+  static getCommunityList(): List<Community> {
     return {
       maxResults: '27',
       subscriptions: [1, 2, 3, 4],
       items: [
         {
           id: 1,
-          description: 'alskldkdjhdd',
-          createdAt: '14-12-2018',
-          name: ''
-
+          image: {
+            id: 1,
+            imageName: 'img_46552314_75e38578020fba81864216ec248f711f',
+            imageSize: 22,
+            updatedAt: '2018-12-11',
+            extension: 'jpeg',
+            discriminator: 'parish'
+          },
+          name: 'Koło różańcowe',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed tellus ex. Praesent aliquet ex eget metus ' +
+            'tristique bibendum. Pellentesque dui enim, fringilla sit amet ligula eu, imperdiet venenatis mi. Donec vitae pharetra massa. ' +
+            'Aliquam ornare sem quis lacinia elementum.',
+          createdAt: '14-12-2018'
+        },
+        {
+          id: 2,
+          image: {
+            id: 2,
+            imageName: 'img_46552314_75e38578020fba81864216ec248f711f',
+            imageSize: 22,
+            updatedAt: '2018-12-11',
+            extension: 'jpeg',
+            discriminator: 'parish'
+          },
+          name: 'Oaza',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed tellus ex. Praesent aliquet ex eget metus' +
+            ' tristique bibendum. Pellentesque dui enim, fringilla sit amet ligula eu, imperdiet venenatis mi. Donec vitae pharetra massa.' +
+            ' Aliquam ornare sem quis lacinia elementum.',
+          createdAt: '14-12-2018'
+        },
+        {
+          id: 3,
+          image: {
+            id: 3,
+            imageName: 'img_46552314_75e38578020fba81864216ec248f711f',
+            imageSize: 22,
+            updatedAt: '2018-12-11',
+            extension: 'jpeg',
+            discriminator: 'parish'
+          },
+          name: 'Schola młodzieżowa',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed tellus ex. Praesent aliquet ex eget metus' +
+            ' tristique bibendum. Pellentesque dui enim, fringilla sit amet ligula eu, imperdiet venenatis mi. Donec vitae pharetra massa.' +
+            ' Aliquam ornare sem quis lacinia elementum.',
+          createdAt: '14-12-2018'
         }
       ]
     };
   }
+
+  static getEventsList(): List<Event> {
+    return  {
+      maxResults: '5',
+      subscriptions: [1, 2, 3, 4],
+      items: [
+        {
+          id: 1,
+          title: 'jajdjdjada',
+          description: 'ajdhjkasbckds',
+          organizationAt: 'Lublin',
+          image: null,
+          parish: {
+            id: 1,
+            image: {
+              id: 1,
+              imageName: 'img_46552314_75e38578020fba81864216ec248f711f',
+              imageSize: 22,
+              updatedAt: '2018-12-11',
+              extension: 'jpeg',
+              discriminator: 'parish'
+            },
+            name: 'Parafia',
+            city: 'Lublin'
+          },
+          community: null,
+          tags: [
+            {
+              id: 5,
+              name: 'Rekolekcje adwentowe'
+            }
+          ]
+        },
+        {
+          id: 2,
+          title: 'jajdjdjada',
+          description: 'ajdhjkasbckds',
+          organizationAt: 'Lublin',
+          image: null,
+          parish: {
+            id: 2,
+            image: {
+              id: 2,
+              imageName: 'img_46552314_75e38578020fba81864216ec248f711f',
+              imageSize: 22,
+              updatedAt: '2018-12-11',
+              extension: 'jpeg',
+              discriminator: 'parish'
+            },
+            name: 'Parafia',
+            city: 'Lublin'
+          },
+          community: null,
+          tags: [
+            {
+              id: 5,
+              name: 'Rekolekcje adwentowe'
+            }
+          ]
+        },
+        {
+          id: 3,
+          title: 'jajdjdjada',
+          description: 'ajdhjkasbckds',
+          organizationAt: 'Lublin',
+          image: null,
+          parish: {
+            id: 3,
+            image: {
+              id: 3,
+              imageName: 'img_46552314_75e38578020fba81864216ec248f711f',
+              imageSize: 22,
+              updatedAt: '2018-12-11',
+              extension: 'jpeg',
+              discriminator: 'parish'
+            },
+            name: 'Parafia',
+            city: 'Lublin'
+          },
+          community: null,
+          tags: [
+            {
+              id: 5,
+              name: 'Rekolekcje adwentowe'
+            }
+          ]
+        },
+      ]
+    };
+  }
 }
+
+
 

@@ -8,7 +8,8 @@
           <div>{{ (display$ | async)?.name }}</div>
         </mat-panel-title>
       </mat-expansion-panel-header>
-      <p>Lublin ul. XXX </p>
+      <p>{{ (display$ | async)?.city }}</p>
+      <p>{{ (display$ | async)?.street }}</p>
     </mat-expansion-panel>
   </mat-accordion>
   <!--<div>{{ (display$ | async)?.name }}</div>-->

@@ -13,7 +13,7 @@ export interface Community {
   postCode?: string;
   postCity?: string;
   parish?: Parish;
-  createdaAt?: string;
+  createdAt?: string;
   }
 
 

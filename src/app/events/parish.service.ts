@@ -17,8 +17,8 @@ export class ParishService {
   loadPosts(): Observable<List<Post>> {
     return of(ParishUtil.getPostsList());
   }
-  // loadCommunityPosts(): Observable<List<Community>> {
-  //   return of(ParishUtil.)
-  // }
+  loadCommunityPosts(): Observable<List<Community>> {
+    return of(ParishUtil.getCommunityList());
+  }
 }
 

@@ -1,3 +1,15 @@
-<p>
-  parish-communities works!
-</p>
+<h3 class="p-3">Wspólnoty działające przy parafii</h3>
+
+<!--<pre>{{communityList$ | async | json}}</pre>-->
+
+<ng-container *ngIf="(communityList$ | async)?.items">
+<mat-card *ngFor="let item of (communityList$ | async)?.items" class="mb-3">
+  <div class="d-flex align-items-center">
+    <img class="community-img"
+         [src]="'https://api-agappe.deployflex.com/' + 'image/' + item?.image?.discriminator + '/' + item?.image?.imageName + '.' + item?.image?.extension">
+    <div class="pl-2 font-weight-bold">{{ item.name}}</div>
+
+  </div>
+  <div class="mt-3">{{ item.description}}</div>
+</mat-card>
+</ng-container>
