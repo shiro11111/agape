@@ -2,6 +2,7 @@ import { Parish } from '../../../models/parish';
 import { Post } from '../../../models/post';
 import { List } from '../../../models/list';
 import { Community } from '../../../models/community';
+import { ParishEvent } from '../../../models/parishEvent';
 
 export class ParishUtil {
 
@@ -19,8 +20,8 @@ export class ParishUtil {
       iskkNumber: 1231,
       name: 'Parafia św. Łazarza',
       dedicated: 'assd',
-      city: 'asddgfg',
-      street: '123',
+      city: 'Lublin',
+      street: 'Okulickiego 6A',
       buildingNumber: '12',
       apartmentNumber: '123',
       postCode: '12-343',
@@ -195,14 +196,14 @@ export class ParishUtil {
     };
   }
 
-  static getEventsList(): List<Event> {
+  static getEventsList(): List<ParishEvent> {
     return  {
       maxResults: '5',
       subscriptions: [1, 2, 3, 4],
       items: [
         {
           id: 1,
-          title: 'jajdjdjada',
+          title: 'Droga krzyżowa',
           description: 'ajdhjkasbckds',
           organizationAt: 'Lublin',
           image: null,
@@ -229,7 +230,7 @@ export class ParishUtil {
         },
         {
           id: 2,
-          title: 'jajdjdjada',
+          title: 'Koncert Arki Noego',
           description: 'ajdhjkasbckds',
           organizationAt: 'Lublin',
           image: null,
@@ -256,7 +257,7 @@ export class ParishUtil {
         },
         {
           id: 3,
-          title: 'jajdjdjada',
+          title: 'Piknik charytatywny',
           description: 'ajdhjkasbckds',
           organizationAt: 'Lublin',
           image: null,

@@ -2,13 +2,21 @@ import { Injectable } from '@angular/core';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { ParishService } from './parish.service';
 import { catchError, map, switchMap } from 'rxjs/operators';
-import { LoadCommunityPostsSuccess, LoadParishFail, LoadParishSuccess, LoadPostsListFail, LoadPostsListSuccess } from './parish.actions';
+import {
+  LoadCommunityPostsSuccess, LoadEventsListFail,
+  LoadEventsListSuccess,
+  LoadParishFail,
+  LoadParishSuccess,
+  LoadPostsListFail,
+  LoadPostsListSuccess
+} from './parish.actions';
 import { of } from 'rxjs';
 import { Parish } from '../models/parish';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Post } from '../models/post';
 import { List } from '../models/list';
 import { Community } from '../models/community';
+import { ParishEvent } from '../models/parishEvent';
 
 @Injectable()
 export class ParishEffects {
@@ -36,7 +44,15 @@ export class ParishEffects {
       ofType('LOAD_COMMUNITY_POSTS'),
       switchMap(() => this.service.loadCommunityPosts().pipe(
         map((res: List<Community>) => new LoadCommunityPostsSuccess((res)),
-          catchError((error: any) => of(new LoadPostsListFail(error)))),
+          catchError((error: any) => of(new LoadPostsListFail(error))))
+      ))
+    );
+
+    @Effect() loadEventsList$ = this.actions$.pipe(
+      ofType('LOAD_EVENTS_LIST'),
+      switchMap(() => this.service.loadEventsPosts().pipe(
+        map((res: List<ParishEvent>) => new LoadEventsListSuccess(res)),
+        catchError((error: any) => of(new LoadEventsListFail(error)))
       ))
     );
 }

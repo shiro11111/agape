@@ -1,1 +1,14 @@
 <h3 class="p-3">Wydarzenia w parafii</h3>
+
+<!--<pre>{{eventsList$ | async | json}}</pre>-->
+
+
+<ng-container *ngIf="(eventsList$ | async)">
+<mat-card *ngFor="let item of (eventsList$ | async)?.items" class="mb-3">
+  <div>{{ item.title }}</div>
+<div class="d-flex align-items-center">
+  <img class="events-img"
+    [src]="'https://api-agappe.deployflex.com/' + 'image/' + item?.parish.image?.discriminator + '/' + item?.parish.image?.imageName + '.' + item?.parish.image?.extension">
+</div>
+</mat-card>
+</ng-container>
