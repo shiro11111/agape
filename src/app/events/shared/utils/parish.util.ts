@@ -205,7 +205,7 @@ export class ParishUtil {
           id: 1,
           title: 'Droga krzyżowa',
           description: 'ajdhjkasbckds',
-          organizationAt: 'Lublin',
+          organizationAt: 'Lublin 19.11.2019',
           image: null,
           parish: {
             id: 1,
@@ -232,7 +232,7 @@ export class ParishUtil {
           id: 2,
           title: 'Koncert Arki Noego',
           description: 'ajdhjkasbckds',
-          organizationAt: 'Lublin',
+          organizationAt: 'Lublin 19.11.2019',
           image: null,
           parish: {
             id: 2,
@@ -259,7 +259,7 @@ export class ParishUtil {
           id: 3,
           title: 'Piknik charytatywny',
           description: 'ajdhjkasbckds',
-          organizationAt: 'Lublin',
+          organizationAt: 'Lublin 19.11.2019',
           image: null,
           parish: {
             id: 3,
