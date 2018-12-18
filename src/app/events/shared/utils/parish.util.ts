@@ -139,6 +139,7 @@ export class ParishUtil {
       ]
     };
   }
+
   static getCommunityList(): List<Community> {
     return {
       maxResults: '27',
@@ -156,8 +157,9 @@ export class ParishUtil {
           },
           name: 'Koło różańcowe',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed tellus ex. Praesent aliquet ex eget metus ' +
-            'tristique bibendum. Pellentesque dui enim, fringilla sit amet ligula eu, imperdiet venenatis mi. Donec vitae pharetra massa. ' +
-            'Aliquam ornare sem quis lacinia elementum.',
+            'tristique bibendum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed tellus ex. Praesent aliquet ex eget metus ' +
+            'tristique bibendumLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed tellus ex. Praesent aliquet ex eget metus ' +
+            'tristique bibendum.',
           createdAt: '14-12-2018'
         },
         {
@@ -172,8 +174,7 @@ export class ParishUtil {
           },
           name: 'Oaza',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed tellus ex. Praesent aliquet ex eget metus' +
-            ' tristique bibendum. Pellentesque dui enim, fringilla sit amet ligula eu, imperdiet venenatis mi. Donec vitae pharetra massa.' +
-            ' Aliquam ornare sem quis lacinia elementum.',
+            ' tristique bibendum.',
           createdAt: '14-12-2018'
         },
         {
@@ -188,7 +189,6 @@ export class ParishUtil {
           },
           name: 'Schola młodzieżowa',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed tellus ex. Praesent aliquet ex eget metus' +
-            ' tristique bibendum. Pellentesque dui enim, fringilla sit amet ligula eu, imperdiet venenatis mi. Donec vitae pharetra massa.' +
             ' Aliquam ornare sem quis lacinia elementum.',
           createdAt: '14-12-2018'
         }
@@ -197,7 +197,7 @@ export class ParishUtil {
   }
 
   static getEventsList(): List<ParishEvent> {
-    return  {
+    return {
       maxResults: '5',
       subscriptions: [1, 2, 3, 4],
       items: [

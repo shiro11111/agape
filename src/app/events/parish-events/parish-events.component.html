@@ -6,7 +6,7 @@
 <ng-container *ngIf="(eventsList$ | async)">
 <mat-card *ngFor="let item of (eventsList$ | async)?.items" class="mb-3">
   <div class="font-weight-bold">{{ item.title }}</div>
-  <div>{{ item.organizationAt }}</div>
+  <div class="mb-2">{{ item.organizationAt }}</div>
 <div class="d-flex align-items-center">
   <img class="events-img"
     [src]="'https://api-agappe.deployflex.com/' + 'image/' + item?.parish.image?.discriminator + '/' + item?.parish.image?.imageName + '.' + item?.parish.image?.extension">
