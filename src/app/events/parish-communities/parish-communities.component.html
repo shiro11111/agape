@@ -8,7 +8,7 @@
     <img class="community-img"
          [src]="'https://api-agappe.deployflex.com/' + 'image/' + item?.image?.discriminator + '/' + item?.image?.imageName + '.' + item?.image?.extension">
     <div class="p-2">
-    <div class="font-weight-bold">{{ item.name }}</div>
+    <div class="font-weight-bold" (click)="onNavigateToDetails()")>{{ item.name }}</div>
     <div>{{ item.description | truncate:[100] }}</div>
     </div>
   </div>

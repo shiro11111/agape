@@ -3,6 +3,7 @@ import { Post } from '../../../models/post';
 import { List } from '../../../models/list';
 import { Community } from '../../../models/community';
 import { ParishEvent } from '../../../models/parishEvent';
+import { CommunityPost } from '../../../models/communityPost';
 
 export class ParishUtil {
 
@@ -282,6 +283,72 @@ export class ParishUtil {
             }
           ]
         },
+      ]
+    };
+  }
+
+  static getCommunityDetails(): List<CommunityPost> {
+    return {
+      maxResults: '5',
+      subscriptions: [1, 2, 3, 4],
+      items: [
+        {
+          id: 83,
+          description: 'blablah',
+          createdAt: '2018-12-18',
+          isPinned: false,
+          parish: null,
+          community: {
+            id: 1,
+            name: 'blahblah',
+            description: 'Lorem ipsum',
+            city: 'Lublin',
+            street: 'adf',
+            buildingNumber: 'lala',
+            apartmentNumber: '12',
+            postCode: '12-222',
+            postCity: 'lllll',
+            createdAt: '2018-12-18'
+          }
+        },
+        {
+          id: 84,
+          description: 'blablah',
+          createdAt: '2018-12-18',
+          isPinned: false,
+          parish: null,
+          community: {
+            id: 2,
+            name: 'blahblah',
+            description: 'Lorem ipsum',
+            city: 'Lublin',
+            street: 'adf',
+            buildingNumber: 'lala',
+            apartmentNumber: '12',
+            postCode: '12-222',
+            postCity: 'lllll',
+            createdAt: '2018-12-18'
+          }
+        },
+        {
+          id: 85,
+          description: 'blablah',
+          createdAt: '2018-12-18',
+          isPinned: false,
+          parish: null,
+          community: {
+            id: 3,
+            name: 'blahblah',
+            description: 'Lorem ipsum',
+            city: 'Lublin',
+            street: 'adf',
+            buildingNumber: 'lala',
+            apartmentNumber: '12',
+            postCode: '12-222',
+            postCity: 'lllll',
+            createdAt: '2018-12-18'
+          }
+        }
       ]
     };
   }

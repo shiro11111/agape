@@ -13,9 +13,10 @@ import { ParishEffects } from './events/parish.effects';
 import { MatButtonModule, MatCardModule, MatIconModule, MatToolbarModule } from '@angular/material';
 
 
+
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,

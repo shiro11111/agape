@@ -17,7 +17,8 @@ import { ParishState } from '../parish.reducers';
 export class ParishCommunitiesComponent implements OnInit {
   communityList$: Observable<List<Community>>
 
-  constructor(private store: Store<AppState>) { }
+  constructor(private store: Store<AppState>) {
+  }
 
   ngOnInit() {
     this.store.dispatch(new LoadCommunityPosts());
@@ -26,4 +27,8 @@ export class ParishCommunitiesComponent implements OnInit {
       map((state: ParishState) => state && state.community));
   }
 
-}
+  onNavigateToDetails(): void {
+
+    }
+  }
+

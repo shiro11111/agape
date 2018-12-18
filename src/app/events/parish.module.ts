@@ -16,6 +16,7 @@ import { ParishRoutingModule } from './parish.routing.module';
 import { ParishCommunitiesComponent } from './parish-communities/parish-communities.component';
 import { ParishEventsComponent } from './parish-events/parish-events.component';
 import { TruncatePipe } from './truncate-pipe';
+import { CommunityDetailsComponent } from './community-details/community-details.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { TruncatePipe } from './truncate-pipe';
     ParishMainComponent,
     ParishCommunitiesComponent,
     ParishEventsComponent,
+    CommunityDetailsComponent,
     TruncatePipe
   ],
   imports: [
