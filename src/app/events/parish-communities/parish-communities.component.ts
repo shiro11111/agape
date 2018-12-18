@@ -7,7 +7,7 @@ import { Store } from '@ngrx/store';
 import { LoadCommunityPosts } from '../parish.actions';
 import { map } from 'rxjs/operators';
 import { ParishState } from '../parish.reducers';
-
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-parish-communities',
@@ -15,9 +15,11 @@ import { ParishState } from '../parish.reducers';
   styleUrls: ['./parish-communities.component.css']
 })
 export class ParishCommunitiesComponent implements OnInit {
-  communityList$: Observable<List<Community>>
+  communityList$: Observable<List<Community>>;
 
-  constructor(private store: Store<AppState>) {
+  constructor(private store: Store<AppState>,
+              private router: Router,
+              private route: ActivatedRoute) {
   }
 
   ngOnInit() {
@@ -27,8 +29,9 @@ export class ParishCommunitiesComponent implements OnInit {
       map((state: ParishState) => state && state.community));
   }
 
-  onNavigateToDetails(): void {
-
-    }
+  onNavigateToDetails(id: number): void {
+    console.log(id);
+    this.router.navigate([`details/${id}`], { relativeTo: this.route });
   }
+}
 

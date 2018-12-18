@@ -13,10 +13,9 @@ const routes: Routes = [
     children: [
       { path: '', pathMatch: 'full', redirectTo: 'main' },
       { path: 'main', component: ParishPostsComponent },
-      { path: 'communities', component: ParishCommunitiesComponent, children: [
-          { path: 'details', component: CommunityDetailsComponent}
-        ] },
-      { path: 'events', component: ParishEventsComponent }
+      { path: 'communities', component: ParishCommunitiesComponent},
+      { path: 'events', component: ParishEventsComponent },
+      { path: 'communities/details/:id', component: CommunityDetailsComponent}
     ]
   },
 ];
