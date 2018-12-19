@@ -126,7 +126,6 @@ export class LoadEventDetailsFail implements Action {
 }
 
 
-
 export type ParishActions = LoadParish | LoadParishSuccess | LoadParishFail | LoadPostsList | LoadPostsListSuccess | LoadPostsListFail |
   LoadCommunityPosts | LoadCommunityPostsSuccess | LoadCommunityPostsFail | LoadEventsList | LoadEventsListSuccess | LoadEventsListFail |
   LoadCommunityDetails | LoadCommunityDetailsSuccess | LoadCommunityDetailsFail | LoadEventDetails | LoadEventDetailsSuccess |

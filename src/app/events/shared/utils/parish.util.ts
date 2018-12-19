@@ -367,12 +367,21 @@ export class ParishUtil {
         'Proin malesuada, sapien in finibus rhoncus, sapien neque ornare justo, et volutpat nulla ante eu orci.',
       organizationAt: 'Lublin 12-12-2018',
       image: null,
-      parish: {},
+      parish: {
+        image: {
+          id: 1,
+          imageName: 'bla',
+    imageSize: 1,
+    updatedAt: 'alala',
+    extension: 'sadjkajc',
+    discriminator: 'jnjdhfj'
+        }
+      },
       community: null,
       tags: [
         {
           id: 5,
-          name: 'Droga krzyżowa'
+          name: 'drogakrzyzowa'
         }
       ]
     };
