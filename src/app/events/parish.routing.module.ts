@@ -5,6 +5,7 @@ import { ParishPostsComponent } from './parish-posts/parish-posts.component';
 import { ParishCommunitiesComponent } from './parish-communities/parish-communities.component';
 import { ParishEventsComponent } from './parish-events/parish-events.component';
 import { CommunityDetailsComponent } from './community-details/community-details.component';
+import { ParishEventsDetailsComponent } from './parish-events-details/parish-events-details.component';
 
 const routes: Routes = [
   {
@@ -15,7 +16,8 @@ const routes: Routes = [
       { path: 'main', component: ParishPostsComponent },
       { path: 'communities', component: ParishCommunitiesComponent},
       { path: 'events', component: ParishEventsComponent },
-      { path: 'communities/details/:id', component: CommunityDetailsComponent}
+      { path: 'communities/details/:id', component: CommunityDetailsComponent},
+      { path: 'events/details/:id', component: ParishEventsDetailsComponent }
     ]
   },
 ];

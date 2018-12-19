@@ -5,6 +5,7 @@ import { List } from '../models/list';
 import { Post } from '../models/post';
 import { Community } from '../models/community';
 import { ParishEvent } from '../models/parishEvent';
+import { CommunityPost } from '../models/communityPost';
 
 
 export const LOAD_PARISH = 'LOAD_PARISH';
@@ -19,6 +20,12 @@ export const LOAD_COMMUNITY_POSTS_FAIL = 'LOAD_COMMUNITY_POSTS_FAIL';
 export const LOAD_EVENTS_LIST = 'LOAD_EVENTS_LIST';
 export const LOAD_EVENTS_LIST_SUCCESS = 'LOAD_EVENTS_LIST_SUCCESS';
 export const LOAD_EVENTS_LIST_FAIL = 'LOAD_EVENTS_LIST_FAIL';
+export const LOAD_COMMUNITY_DETAILS = 'LOAD_COMMUNITY_DETAILS';
+export const LOAD_COMMUNITY_DETAILS_SUCCESS = 'LOAD_COMMUNITY_DETAILS_SUCCESS';
+export const LOAD_COMMUNITY_DETAILS_FAIL = 'LOAD_COMMUNITY_DETAILS_FAIL';
+export const LOAD_EVENT_DETAILS = 'LOAD_EVENT_DETAILS';
+export const LOAD_EVENT_DETAILS_SUCCESS = 'LOAD_EVENT_DETAILS_SUCCESS';
+export const LOAD_EVENT_DETAILS_FAIL = 'LOAD_EVENT_DETAILS_SUCCESS_FAIL';
 
 
 
@@ -86,7 +93,42 @@ export class LoadEventsListFail implements Action {
   constructor(public payload: HttpErrorResponse) {}
 }
 
+export class LoadCommunityDetails implements Action {
+  readonly type = LOAD_COMMUNITY_DETAILS;
+}
+
+export class LoadCommunityDetailsSuccess implements Action {
+  readonly type = LOAD_COMMUNITY_DETAILS_SUCCESS;
+
+  constructor(public payload: List<CommunityPost>) {}
+}
+
+export class LoadCommunityDetailsFail implements Action {
+  readonly type = LOAD_COMMUNITY_DETAILS_FAIL;
+
+  constructor(public payload: HttpErrorResponse) {}
+}
+
+export class LoadEventDetails implements Action {
+  readonly type = LOAD_EVENT_DETAILS;
+}
+
+export class LoadEventDetailsSuccess implements Action {
+  readonly type = LOAD_EVENT_DETAILS_SUCCESS;
+
+constructor(public payload: ParishEvent) {}
+}
+
+export class LoadEventDetailsFail implements Action {
+  readonly type = LOAD_EVENT_DETAILS_FAIL;
+
+  constructor(public payload: HttpErrorResponse) {}
+}
+
+
 
 export type ParishActions = LoadParish | LoadParishSuccess | LoadParishFail | LoadPostsList | LoadPostsListSuccess | LoadPostsListFail |
-  LoadCommunityPosts | LoadCommunityPostsSuccess | LoadCommunityPostsFail | LoadEventsList | LoadEventsListSuccess | LoadEventsListFail;
+  LoadCommunityPosts | LoadCommunityPostsSuccess | LoadCommunityPostsFail | LoadEventsList | LoadEventsListSuccess | LoadEventsListFail |
+  LoadCommunityDetails | LoadCommunityDetailsSuccess | LoadCommunityDetailsFail | LoadEventDetails | LoadEventDetailsSuccess |
+  LoadEventDetailsFail;
 

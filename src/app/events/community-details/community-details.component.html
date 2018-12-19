@@ -1,3 +1,10 @@
-<p>
-  community-details works!
-</p>
+<!--<pre>{{communityDetails$ | async | json}}</pre>-->
+
+<h3 class="p-3">Najnowsze wpisy</h3>
+<ng-container *ngIf="(communityDetails$ | async)?.items")>
+  <mat-card *ngFor="let item of (communityDetails$ | async)?.items" class="mb-3">
+  <div class="font-weight-bold">{{ item.community.name }}</div>
+    <div>{{ item.createdAt }}</div>
+   <div>{{ item.description }}</div>
+  </mat-card>
+</ng-container>

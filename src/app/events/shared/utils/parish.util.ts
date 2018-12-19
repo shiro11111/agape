@@ -294,13 +294,15 @@ export class ParishUtil {
       items: [
         {
           id: 83,
-          description: 'blablah',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac orci non ligula fringilla malesuada. ' +
+            'Proin malesuada, sapien in finibus rhoncus, sapien neque ornare justo, et volutpat nulla ante eu orci. Sed viverra ante vel ' +
+            'mollis gravida. Curabitur scelerisque nunc ac ultricies dignissim.',
           createdAt: '2018-12-18',
           isPinned: false,
           parish: null,
           community: {
             id: 1,
-            name: 'blahblah',
+            name: 'Wpis wspólnoty',
             description: 'Lorem ipsum',
             city: 'Lublin',
             street: 'adf',
@@ -313,13 +315,15 @@ export class ParishUtil {
         },
         {
           id: 84,
-          description: 'blablah',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac orci non ligula fringilla malesuada. ' +
+            'Proin malesuada, sapien in finibus rhoncus, sapien neque ornare justo, et volutpat nulla ante eu orci. Sed viverra ante vel' +
+            ' mollis gravida. Curabitur scelerisque nunc ac ultricies dignissim.',
           createdAt: '2018-12-18',
           isPinned: false,
           parish: null,
           community: {
             id: 2,
-            name: 'blahblah',
+            name: 'Wpis wspólnoty',
             description: 'Lorem ipsum',
             city: 'Lublin',
             street: 'adf',
@@ -332,13 +336,15 @@ export class ParishUtil {
         },
         {
           id: 85,
-          description: 'blablah',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac orci non ligula fringilla malesuada. ' +
+            'Proin malesuada, sapien in finibus rhoncus, sapien neque ornare justo, et volutpat nulla ante eu orci. Sed viverra ante vel ' +
+            'mollis gravida. Curabitur scelerisque nunc ac ultricies dignissim.',
           createdAt: '2018-12-18',
           isPinned: false,
           parish: null,
           community: {
             id: 3,
-            name: 'blahblah',
+            name: 'Wpis wspólnoty',
             description: 'Lorem ipsum',
             city: 'Lublin',
             street: 'adf',
@@ -348,6 +354,25 @@ export class ParishUtil {
             postCity: 'lllll',
             createdAt: '2018-12-18'
           }
+        }
+      ]
+    };
+  }
+
+  static getEventDetails(): ParishEvent {
+    return {
+      id: 1,
+      title: 'Droga krzyżowa',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac orci non ligula fringilla malesuada. ' +
+        'Proin malesuada, sapien in finibus rhoncus, sapien neque ornare justo, et volutpat nulla ante eu orci.',
+      organizationAt: 'Lublin 12-12-2018',
+      image: null,
+      parish: {},
+      community: null,
+      tags: [
+        {
+          id: 5,
+          name: 'Droga krzyżowa'
         }
       ]
     };

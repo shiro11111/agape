@@ -1,0 +1,7 @@
+<!--<pre>{{eventDetails$ | async | json}}</pre>-->
+
+<mat-card class="mb-2">
+  <div class="font-weight-bold">{{ (eventDetails$ | async)?.title }}</div>
+  <div>{{ (eventDetails$ | async)?.organizationAt }}</div>
+  <div class="mt-2">{{ (eventDetails$ | async)?.description }}</div>
+</mat-card>

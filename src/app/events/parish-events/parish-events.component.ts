@@ -7,6 +7,7 @@ import { Store } from '@ngrx/store';
 import { LoadEventsList } from '../parish.actions';
 import { ParishState } from '../parish.reducers';
 import { map } from 'rxjs/operators';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-parish-events',
@@ -16,7 +17,9 @@ import { map } from 'rxjs/operators';
 export class ParishEventsComponent implements OnInit {
   eventsList$: Observable<List<ParishEvent>>;
 
-  constructor(private store: Store<AppState>) {
+  constructor(private store: Store<AppState>,
+              private router: Router,
+              private route: ActivatedRoute) {
   }
 
   ngOnInit() {
@@ -24,6 +27,11 @@ export class ParishEventsComponent implements OnInit {
 
     this.eventsList$ = this.store.select('parishState').pipe(
       map((state: ParishState) => state && state.parishEvent));
+  }
+
+  onNavigateToDetails(id: number): void {
+    console.log(id);
+    this.router.navigate([`details/${id}`], {relativeTo: this.route});
   }
 
 }

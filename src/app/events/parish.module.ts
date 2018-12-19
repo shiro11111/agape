@@ -17,6 +17,7 @@ import { ParishCommunitiesComponent } from './parish-communities/parish-communit
 import { ParishEventsComponent } from './parish-events/parish-events.component';
 import { TruncatePipe } from './truncate-pipe';
 import { CommunityDetailsComponent } from './community-details/community-details.component';
+import { ParishEventsDetailsComponent } from './parish-events-details/parish-events-details.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { CommunityDetailsComponent } from './community-details/community-details
     ParishCommunitiesComponent,
     ParishEventsComponent,
     CommunityDetailsComponent,
+    ParishEventsDetailsComponent,
     TruncatePipe
   ],
   imports: [

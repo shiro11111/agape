@@ -1,4 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { AppState } from '../../app.reducers';
+import { Store } from '@ngrx/store';
+import { LoadCommunityDetails } from '../parish.actions';
+import { CommunityPost } from '../../models/communityPost';
+import { List } from '../../models/list';
+import { Observable } from 'rxjs';
+import { ParishState } from '../parish.reducers';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-community-details',
@@ -6,10 +14,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./community-details.component.css']
 })
 export class CommunityDetailsComponent implements OnInit {
+  communityDetails$: Observable<List<CommunityPost>>;
 
-  constructor() { }
+  constructor(private store: Store<AppState>) { }
 
   ngOnInit() {
-  }
+    this.store.dispatch(new LoadCommunityDetails());
 
+    this.communityDetails$ = this.store.select('parishState').pipe(
+      map((state: ParishState) => state && state.communityDetails));
+  }
 }
