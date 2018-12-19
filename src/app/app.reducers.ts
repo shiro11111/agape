@@ -1,9 +1,9 @@
 
 import * as fromParishState from './events/parish.reducers';
-import * as fromToolbarState from './events/toolbar/toolbar.reducer';
+import * as fromToolbarState from './toolbar/toolbar.reducer';
 import { ActionReducerMap } from '@ngrx/store';
 import { parishReducer } from './events/parish.reducers';
-import { toolbarReducer } from './events/toolbar/toolbar.reducer';
+import { toolbarReducer } from './toolbar/toolbar.reducer';
 
 
 export interface AppState {

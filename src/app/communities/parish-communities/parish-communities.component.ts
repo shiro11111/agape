@@ -4,9 +4,9 @@ import { Observable } from 'rxjs';
 import { List } from '../../models/list';
 import { AppState } from '../../app.reducers';
 import { Store } from '@ngrx/store';
-import { LoadCommunityPosts } from '../parish.actions';
+import { LoadCommunityPosts } from '../../events/parish.actions';
 import { map } from 'rxjs/operators';
-import { ParishState } from '../parish.reducers';
+import { ParishState } from '../../events/parish.reducers';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({

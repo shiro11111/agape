@@ -3,8 +3,8 @@ import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { AppState } from './app.reducers';
 import { map } from 'rxjs/operators';
-import { ToolbarState } from './events/toolbar/toolbar.reducer';
-import { SetToolbarContentAction } from './events/toolbar/toolbar.actions';
+import { ToolbarState } from './toolbar/toolbar.reducer';
+import { SetToolbarContentAction } from './toolbar/toolbar.actions';
 
 @Component({
   selector: 'app-root',

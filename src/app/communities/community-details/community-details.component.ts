@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { AppState } from '../../app.reducers';
 import { Store } from '@ngrx/store';
-import { LoadCommunityDetails } from '../parish.actions';
+import { LoadCommunityDetails } from '../../events/parish.actions';
 import { CommunityPost } from '../../models/communityPost';
 import { List } from '../../models/list';
 import { Observable } from 'rxjs';
-import { ParishState } from '../parish.reducers';
+import { ParishState } from '../../events/parish.reducers';
 import { map } from 'rxjs/operators';
 
 @Component({

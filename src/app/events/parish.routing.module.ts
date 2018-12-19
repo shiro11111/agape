@@ -2,9 +2,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { ParishMainComponent } from './parish-main/parish-main.component';
 import { ParishPostsComponent } from './parish-posts/parish-posts.component';
-import { ParishCommunitiesComponent } from './parish-communities/parish-communities.component';
+import { ParishCommunitiesComponent } from '../communities/parish-communities/parish-communities.component';
 import { ParishEventsComponent } from './parish-events/parish-events.component';
-import { CommunityDetailsComponent } from './community-details/community-details.component';
+import { CommunityDetailsComponent } from '../communities/community-details/community-details.component';
 import { ParishEventsDetailsComponent } from './parish-events-details/parish-events-details.component';
 
 const routes: Routes = [

@@ -11,7 +11,6 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 import { ParishEffects } from './events/parish.effects';
 import { MatButtonModule, MatCardModule, MatIconModule, MatToolbarModule } from '@angular/material';
-import { ParishEventsDetailsComponent } from './events/parish-events-details/parish-events-details.component';
 
 
 
