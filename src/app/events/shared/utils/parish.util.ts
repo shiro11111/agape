@@ -302,6 +302,13 @@ export class ParishUtil {
           parish: null,
           community: {
             id: 1,
+            image: {
+              imageName: 'bbhh',
+              imageSize: 1233,
+              updatedAt: '12 -13 - 00',
+              extension: 'jpg',
+              discriminator: 'sss'
+            },
             name: 'Wpis wspólnoty',
             description: 'Lorem ipsum',
             city: 'Lublin',

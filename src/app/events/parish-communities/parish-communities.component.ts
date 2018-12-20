@@ -4,9 +4,9 @@ import { Observable } from 'rxjs';
 import { List } from '../../models/list';
 import { AppState } from '../../app.reducers';
 import { Store } from '@ngrx/store';
-import { LoadCommunityPosts } from '../../events/parish.actions';
+import { LoadCommunityPosts } from '../parish.actions';
 import { map } from 'rxjs/operators';
-import { ParishState } from '../../events/parish.reducers';
+import { ParishState } from '../parish.reducers';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -30,7 +30,7 @@ export class ParishCommunitiesComponent implements OnInit {
   }
 
   onNavigateToDetails(id: number): void {
-    this.router.navigate([`details/${id}`], { relativeTo: this.route });
+    this.router.navigate([`../../communities/details/${id}`], { relativeTo: this.route });
   }
 }
 

@@ -1,5 +1,10 @@
 <!--<pre>{{communityDetails$ | async | json}}</pre>-->
 
+<!--<mat-toolbar color="primary">-->
+  <!--<span>Koło różańcowe</span>-->
+<!--</mat-toolbar>-->
+
+<img>
 <h3 class="p-3">Najnowsze wpisy</h3>
 <ng-container *ngIf="(communityDetails$ | async)?.items")>
   <mat-card *ngFor="let item of (communityDetails$ | async)?.items" class="mb-3">

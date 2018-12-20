@@ -11,6 +11,10 @@ const routes: Routes = [
     path: 'posts',
     loadChildren: './events/parish.module#ParishModule'
   },
+  {
+    path: 'communities',
+    loadChildren: './communities/communities.module#CommunitiesModule'
+  }
 ];
 
 @NgModule({
