@@ -303,6 +303,7 @@ export class ParishUtil {
           community: {
             id: 1,
             image: {
+              id: 1,
               imageName: 'bbhh',
               imageSize: 1233,
               updatedAt: '12 -13 - 00',
@@ -378,10 +379,10 @@ export class ParishUtil {
         image: {
           id: 1,
           imageName: 'bla',
-    imageSize: 1,
-    updatedAt: 'alala',
-    extension: 'sadjkajc',
-    discriminator: 'jnjdhfj'
+          imageSize: 1,
+          updatedAt: 'alala',
+          extension: 'sadjkajc',
+          discriminator: 'jnjdhfj'
         }
       },
       community: null,
