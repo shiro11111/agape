@@ -16,7 +16,6 @@ import { SetToolbarContentAction } from '../../toolbar/toolbar.actions';
 })
 export class CommunityDetailsComponent implements OnInit {
   communityPosts$: Observable<List<CommunityPost>>;
-  toolbarContent$: Observable<string>;
 
   constructor(private store: Store<AppState>) { }
 
