@@ -6,6 +6,7 @@ import { Store } from '@ngrx/store';
 import { LoadEventDetails } from '../parish.actions';
 import { map } from 'rxjs/operators';
 import { ParishState } from '../parish.reducers';
+import { SetToolbarContentAction } from '../../toolbar/toolbar.actions';
 
 @Component({
   selector: 'app-parish-events-details',
@@ -22,6 +23,7 @@ export class ParishEventsDetailsComponent implements OnInit {
 
     this.eventDetails$ = this.store.select('parishState').pipe(
       map((state: ParishState) => state && state.eventDetails));
-  }
 
+    this.store.dispatch(new SetToolbarContentAction('Wydarzenie'));
+  }
 }

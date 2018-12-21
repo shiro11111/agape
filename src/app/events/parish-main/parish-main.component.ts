@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { SetToolbarContentAction } from '../../toolbar/toolbar.actions';
+import { AppState } from '../../app.reducers';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-parish-main',
@@ -13,9 +16,10 @@ export class ParishMainComponent implements OnInit {
     { path: 'events', label: 'Wydarzenia' },
   ];
 
-  constructor() { }
+  constructor(private store: Store<AppState>) { }
 
   ngOnInit() {
+    this.store.dispatch(new SetToolbarContentAction('Parafia św Łazarza'));
   }
 
 }

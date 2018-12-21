@@ -7,7 +7,6 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { CommunityState } from '../communities.reducers';
 import { LoadCommunityPosts } from '../communities.actions';
-import { ToolbarState } from '../../toolbar/toolbar.reducer';
 import { SetToolbarContentAction } from '../../toolbar/toolbar.actions';
 
 @Component({
@@ -27,9 +26,6 @@ export class CommunityDetailsComponent implements OnInit {
     this.communityPosts$ = this.store.select('communityState').pipe(
       map((state: CommunityState) => state && state.communityPosts));
 
-    this.toolbarContent$ = this.store.select('toolbarState').pipe(
-      map((state: ToolbarState) => state && state.content)
-    );
     this.store.dispatch(new SetToolbarContentAction('Wspólnota'));
   }
 }
