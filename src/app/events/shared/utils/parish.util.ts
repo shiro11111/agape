@@ -287,7 +287,7 @@ export class ParishUtil {
     };
   }
 
-  static getCommunityDetails(): List<CommunityPost> {
+  static getCommunityPosts(): List<CommunityPost> {
     return {
       maxResults: '5',
       subscriptions: [1, 2, 3, 4],

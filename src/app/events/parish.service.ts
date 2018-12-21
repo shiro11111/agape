@@ -6,7 +6,7 @@ import { Post } from '../models/post';
 import { List } from '../models/list';
 import { Community } from '../models/community';
 import { ParishEvent } from '../models/parishEvent';
-import { CommunityPost } from '../models/communityPost';
+
 
 @Injectable({
   providedIn: 'root'
@@ -24,9 +24,6 @@ export class ParishService {
   }
   loadEventsPosts(): Observable<List<ParishEvent>> {
     return of(ParishUtil.getEventsList());
-  }
-  loadCommunityDetails(): Observable<List<CommunityPost>> {
-    return of(ParishUtil.getCommunityDetails());
   }
   loadEventDetails(): Observable<ParishEvent> {
     return of(ParishUtil.getEventDetails());

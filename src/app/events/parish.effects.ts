@@ -3,9 +3,8 @@ import { Actions, Effect, ofType } from '@ngrx/effects';
 import { ParishService } from './parish.service';
 import { catchError, map, switchMap } from 'rxjs/operators';
 import {
-  LoadCommunityDetailsFail,
-  LoadCommunityDetailsSuccess,
-  LoadCommunityPostsSuccess, LoadEventDetailsFail, LoadEventDetailsSuccess, LoadEventsListFail,
+  LoadCommunitiesFail, LoadCommunitiesSuccess,
+  LoadEventDetailsFail, LoadEventDetailsSuccess, LoadEventsListFail,
   LoadEventsListSuccess,
   LoadParishFail,
   LoadParishSuccess,
@@ -19,13 +18,12 @@ import { Post } from '../models/post';
 import { List } from '../models/list';
 import { Community } from '../models/community';
 import { ParishEvent } from '../models/parishEvent';
-import { CommunityPost } from '../models/communityPost';
+
 
 @Injectable()
 export class ParishEffects {
   constructor(private actions$: Actions,
-              private service: ParishService) {
-  }
+              private service: ParishService) {}
 
   @Effect() loadParish$ = this.actions$.pipe(
     ofType('LOAD_PARISH'),
@@ -44,10 +42,10 @@ export class ParishEffects {
     );
 
     @Effect() loadCommunity$ = this.actions$.pipe(
-      ofType('LOAD_COMMUNITY_POSTS'),
+      ofType('LOAD_COMMUNITIES'),
       switchMap(() => this.service.loadCommunityPosts().pipe(
-        map((res: List<Community>) => new LoadCommunityPostsSuccess((res)),
-          catchError((error: any) => of(new LoadPostsListFail(error))))
+        map((res: List<Community>) => new LoadCommunitiesSuccess((res)),
+          catchError((error: any) => of(new LoadCommunitiesFail(error))))
       ))
     );
 
@@ -56,14 +54,6 @@ export class ParishEffects {
       switchMap(() => this.service.loadEventsPosts().pipe(
         map((res: List<ParishEvent>) => new LoadEventsListSuccess(res)),
         catchError((error: any) => of(new LoadEventsListFail(error)))
-      ))
-    );
-
-    @Effect() loadCommunityDetails$ = this.actions$.pipe(
-      ofType('LOAD_COMMUNITY_DETAILS'),
-      switchMap(() => this.service.loadCommunityDetails().pipe(
-        map((res: List<CommunityPost>) => new LoadCommunityDetailsSuccess(res)),
-        catchError((error: any) => of(new LoadCommunityDetailsFail(error)))
       ))
     );
 

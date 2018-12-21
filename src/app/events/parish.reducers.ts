@@ -1,9 +1,7 @@
 import { Parish } from '../models/parish';
 import {
-  LOAD_COMMUNITY_DETAILS, LOAD_COMMUNITY_DETAILS_FAIL, LOAD_COMMUNITY_DETAILS_SUCCESS,
-  LOAD_COMMUNITY_POSTS,
-  LOAD_COMMUNITY_POSTS_FAIL,
-  LOAD_COMMUNITY_POSTS_SUCCESS, LOAD_EVENT_DETAILS, LOAD_EVENT_DETAILS_FAIL, LOAD_EVENT_DETAILS_SUCCESS,
+  LOAD_COMMUNITIES, LOAD_COMMUNITIES_FAIL, LOAD_COMMUNITIES_SUCCESS,
+  LOAD_EVENT_DETAILS, LOAD_EVENT_DETAILS_FAIL, LOAD_EVENT_DETAILS_SUCCESS,
   LOAD_EVENTS_LIST,
   LOAD_EVENTS_LIST_FAIL,
   LOAD_EVENTS_LIST_SUCCESS,
@@ -19,14 +17,13 @@ import { List } from '../models/list';
 import { Post } from '../models/post';
 import { Community } from '../models/community';
 import { ParishEvent } from '../models/parishEvent';
-import { CommunityPost } from '../models/communityPost';
+
 
 export interface ParishState {
  display: Parish;
  list: List<Post>;
  community: List<Community>;
  parishEvent: List<ParishEvent>;
- communityDetails: List<CommunityPost>;
  eventDetails: ParishEvent;
 }
 
@@ -35,7 +32,6 @@ const initialState: ParishState = {
   list: null,
   community: null,
   parishEvent: null,
-  communityDetails: null,
   eventDetails: null
 };
 
@@ -68,16 +64,16 @@ export function parishReducer(state = initialState, action: ParishActions) {
       return {
         ...state
       };
-    case LOAD_COMMUNITY_POSTS:
+    case LOAD_COMMUNITIES:
       return {
-        ...state,
+        ...state
       };
-    case LOAD_COMMUNITY_POSTS_SUCCESS:
+    case LOAD_COMMUNITIES_SUCCESS:
       return {
         ...state,
         community: action.payload
       };
-    case LOAD_COMMUNITY_POSTS_FAIL:
+    case LOAD_COMMUNITIES_FAIL:
       return {
         ...state,
       };
@@ -93,19 +89,6 @@ export function parishReducer(state = initialState, action: ParishActions) {
     case LOAD_EVENTS_LIST_FAIL:
       return {
         ...state,
-      };
-    case LOAD_COMMUNITY_DETAILS:
-      return {
-        ...state
-      };
-    case LOAD_COMMUNITY_DETAILS_SUCCESS:
-      return {
-        ...state,
-        communityDetails: action.payload
-      };
-    case LOAD_COMMUNITY_DETAILS_FAIL:
-      return {
-        ...state
       };
     case LOAD_EVENT_DETAILS:
       return {

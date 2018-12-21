@@ -4,10 +4,10 @@ import { Observable } from 'rxjs';
 import { List } from '../../models/list';
 import { AppState } from '../../app.reducers';
 import { Store } from '@ngrx/store';
-import { LoadCommunityPosts } from '../parish.actions';
 import { map } from 'rxjs/operators';
 import { ParishState } from '../parish.reducers';
 import { ActivatedRoute, Router } from '@angular/router';
+import { LoadCommunities } from '../parish.actions';
 
 @Component({
   selector: 'app-parish-communities',
@@ -23,7 +23,7 @@ export class ParishCommunitiesComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.store.dispatch(new LoadCommunityPosts());
+    this.store.dispatch(new LoadCommunities());
 
     this.communityList$ = this.store.select('parishState').pipe(
       map((state: ParishState) => state && state.community));
