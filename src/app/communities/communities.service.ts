@@ -10,6 +10,7 @@ import { CommunityPost } from '../models/communityPost';
 
 export class CommunitiesService {
 loadCommunityPosts(): Observable<List<CommunityPost>> {
+  console.log('serwis');
   return of(ParishUtil.getCommunityPosts());
   }
 }

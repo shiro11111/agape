@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommunitiesMainComponent implements OnInit {
   navLinks = [
-    { path: 'Tab1', label: 'zakladka1' },
-    { path: 'Tab2', label: 'zakladka2'},
-    { path: 'Tab3', label: 'zakladka3'}
+    { path: 'tab1', label: 'zakladka1' },
+    { path: 'tab2', label: 'zakladka2'},
+    { path: 'tab3', label: 'zakladka3'}
   ];
 
   constructor() { }

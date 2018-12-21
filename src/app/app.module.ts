@@ -11,6 +11,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 import { ParishEffects } from './events/parish.effects';
 import { MatButtonModule, MatCardModule, MatIconModule, MatToolbarModule } from '@angular/material';
+import { CommunitiesEffects } from './communities/communities.effects';
 
 
 
@@ -25,7 +26,8 @@ import { MatButtonModule, MatCardModule, MatIconModule, MatToolbarModule } from 
     StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument(),
     EffectsModule.forRoot([
-      ParishEffects
+      ParishEffects,
+      CommunitiesEffects
     ]),
     BrowserAnimationsModule,
     MatCardModule,

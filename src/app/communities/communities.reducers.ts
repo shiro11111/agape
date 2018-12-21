@@ -3,12 +3,12 @@ import { CommunityPost } from '../models/communityPost';
 import { CommunityActions, LOAD_COMMUNITY_POSTS, LOAD_COMMUNITY_POSTS_FAIL, LOAD_COMMUNITY_POSTS_SUCCESS } from './communities.actions';
 
 export interface CommunityState {
-  communityPosts: List<CommunityPost>
+  communityPosts: List<CommunityPost>;
 }
 
 const initialState: CommunityState = {
   communityPosts: null
-}
+};
 
 export function communityReducer(state = initialState, action: CommunityActions) {
   switch (action.type) {

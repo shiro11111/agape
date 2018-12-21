@@ -6,7 +6,9 @@ import { List } from '../../models/list';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { CommunityState } from '../communities.reducers';
-import { LoadCommunities } from '../../events/parish.actions';
+import { LoadCommunityPosts } from '../communities.actions';
+import { ToolbarState } from '../../toolbar/toolbar.reducer';
+import { SetToolbarContentAction } from '../../toolbar/toolbar.actions';
 
 @Component({
   selector: 'app-community-details',
@@ -15,13 +17,19 @@ import { LoadCommunities } from '../../events/parish.actions';
 })
 export class CommunityDetailsComponent implements OnInit {
   communityPosts$: Observable<List<CommunityPost>>;
+  toolbarContent$: Observable<string>;
 
   constructor(private store: Store<AppState>) { }
 
   ngOnInit() {
-    this.store.dispatch(new LoadCommunities());
+    this.store.dispatch(new LoadCommunityPosts());
 
     this.communityPosts$ = this.store.select('communityState').pipe(
       map((state: CommunityState) => state && state.communityPosts));
+
+    this.toolbarContent$ = this.store.select('toolbarState').pipe(
+      map((state: ToolbarState) => state && state.content)
+    );
+    this.store.dispatch(new SetToolbarContentAction('Wspólnota'));
   }
 }
