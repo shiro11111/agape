@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
     this.toolbarContent$ = this.store.select('toolbarState').pipe(
       map((state: ToolbarState) => state && state.content)
     );
-    this.store.dispatch(new SetToolbarContentAction('Parafia św Łazarza'));
+    this.store.dispatch(new SetToolbarContentAction('Parafia św. Łazarza'));
   }
 }
 

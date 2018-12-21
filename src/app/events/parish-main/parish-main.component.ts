@@ -21,5 +21,4 @@ export class ParishMainComponent implements OnInit {
   ngOnInit() {
     this.store.dispatch(new SetToolbarContentAction('Parafia św Łazarza'));
   }
-
 }
