@@ -370,10 +370,10 @@ export class ParishUtil {
   static getEventDetails(): ParishEvent {
     return {
       id: 1,
-      title: 'Droga krzyżowa',
+      title: 'Nazwa wydarzenia',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac orci non ligula fringilla malesuada. ' +
         'Proin malesuada, sapien in finibus rhoncus, sapien neque ornare justo, et volutpat nulla ante eu orci.',
-      organizationAt: 'Lublin 12-12-2018',
+      organizationAt: '12-12-2018',
       image: null,
       parish: {
         image: {
