@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CommunitiesDisplayComponent } from './communities-display.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule, MatExpansionModule } from '@angular/material';
+import { StoreModule } from '@ngrx/store';
+import { reducers } from '../../app.reducers';
 
 describe('CommunitiesDisplayComponent', () => {
   let component: CommunitiesDisplayComponent;
@@ -8,7 +12,13 @@ describe('CommunitiesDisplayComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CommunitiesDisplayComponent ]
+      declarations: [ CommunitiesDisplayComponent ],
+      imports: [
+        BrowserAnimationsModule,
+        MatCardModule,
+        MatExpansionModule,
+        StoreModule.forRoot(reducers)
+      ]
     })
     .compileComponents();
   }));

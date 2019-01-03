@@ -16,9 +16,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ParishDisplayComponent implements OnInit {
   display$: Observable<Parish>;
 
-  constructor(private store: Store<AppState>, private router: Router,
-              private route: ActivatedRoute
-  ) { }
+  constructor(private store: Store<AppState>) { }
 
   ngOnInit() {
     this.store.dispatch(new LoadParish());
