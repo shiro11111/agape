@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CommunitiesMainComponent } from './communities-main.component';
 import { StoreModule } from '@ngrx/store';
-import { reducers } from '../../app.reducers';
+import { AppState, reducers } from '../../app.reducers';
 import { MatCardModule, MatExpansionModule, MatTabsModule } from '@angular/material';
 import { CommunitiesDisplayComponent } from '../communities-display/communities-display.component';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -14,7 +14,7 @@ describe('CommunitiesMainComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CommunitiesMainComponent, CommunitiesDisplayComponent ],
+      declarations: [CommunitiesMainComponent, CommunitiesDisplayComponent],
       imports: [
         StoreModule.forRoot(reducers),
         BrowserAnimationsModule,
@@ -24,7 +24,7 @@ describe('CommunitiesMainComponent', () => {
         RouterTestingModule
       ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -35,5 +35,13 @@ describe('CommunitiesMainComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should display nav links', () => {
+    expect(component.navLinks).toEqual([
+      { path: 'tab1', label: 'Item1' },
+      { path: 'tab2', label: 'Item2' },
+      { path: 'tab3', label: 'Item3' }
+    ]);
   });
 });
