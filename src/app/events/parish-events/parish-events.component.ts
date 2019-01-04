@@ -8,7 +8,7 @@ import { LoadEventsList } from '../parish.actions';
 import { ParishState } from '../parish.reducers';
 import { map } from 'rxjs/operators';
 import { ActivatedRoute, Router } from '@angular/router';
-import { SetToolbarContentAction } from '../../toolbar/toolbar.actions';
+
 
 @Component({
   selector: 'app-parish-events',

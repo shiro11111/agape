@@ -19,6 +19,6 @@ export class ParishMainComponent implements OnInit {
   constructor(private store: Store<AppState>) { }
 
   ngOnInit() {
-    this.store.dispatch(new SetToolbarContentAction('Parafia św Łazarza'));
+    this.store.dispatch(new SetToolbarContentAction('Parafia św. Łazarza'));
   }
 }
