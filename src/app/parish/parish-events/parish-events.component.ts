@@ -8,6 +8,7 @@ import { LoadEventsList } from '../parish.actions';
 import { ParishState } from '../parish.reducers';
 import { map } from 'rxjs/operators';
 import { ActivatedRoute, Router } from '@angular/router';
+import { SetToolbarContentAction } from '../../toolbar/toolbar.actions';
 
 
 @Component({
@@ -25,6 +26,8 @@ export class ParishEventsComponent implements OnInit {
 
   ngOnInit() {
     this.store.dispatch(new LoadEventsList());
+
+    this.store.dispatch(new SetToolbarContentAction('Parafia św. Łazarza'));
 
     this.eventsList$ = this.store.select('parishState').pipe(
       map((state: ParishState) => state && state.parishEvent));

@@ -145,7 +145,7 @@ describe('ParishEventsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  it('should load events list', () => {
+  it('should load parish list', () => {
     component.ngOnInit();
     expect(store.dispatch).toHaveBeenCalledWith(new LoadEventsList());
     component.eventsList$.pipe(first()).subscribe(data => {

@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: 'posts',
-    loadChildren: './events/parish.module#ParishModule'
+    loadChildren: './parish/parish.module#ParishModule'
   },
   {
     path: 'communities',

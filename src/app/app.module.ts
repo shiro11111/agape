@@ -4,12 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { ParishService } from './events/parish.service';
+import { ParishService } from './parish/parish.service';
 import { StoreModule } from '@ngrx/store';
 import { reducers } from './app.reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
-import { ParishEffects } from './events/parish.effects';
+import { ParishEffects } from './parish/parish.effects';
 import { MatButtonModule, MatCardModule, MatIconModule, MatToolbarModule } from '@angular/material';
 import { CommunitiesEffects } from './communities/communities.effects';
 

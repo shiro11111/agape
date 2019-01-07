@@ -64,7 +64,7 @@ describe('ParishEventsDetailsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  it('should load events details', () => {
+  it('should load parish details', () => {
     component.ngOnInit();
     expect(store.dispatch).toHaveBeenCalledWith(new LoadEventDetails());
     component.eventDetails$.pipe(first()).subscribe(data => {

@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule, MatExpansionModule } from '@angular/material';
 import { Store, StoreModule } from '@ngrx/store';
 import { AppState, reducers } from '../../app.reducers';
-import { LoadCommunities, LoadCommunitiesSuccess } from '../../events/parish.actions';
+import { LoadCommunities, LoadCommunitiesSuccess } from '../../parish/parish.actions';
 import { first } from 'rxjs/operators';
 
 describe('CommunitiesDisplayComponent', () => {

@@ -4,7 +4,7 @@ import { List } from '../../models/list';
 import { Observable } from 'rxjs';
 import { AppState } from '../../app.reducers';
 import { Store } from '@ngrx/store';
-import { LoadCommunities } from '../../events/parish.actions';
+import { LoadCommunities } from '../../parish/parish.actions';
 import { map } from 'rxjs/operators';
 import { CommunityState } from '../communities.reducers';
 

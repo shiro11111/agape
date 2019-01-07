@@ -1,9 +1,9 @@
 
-import * as fromParishState from './events/parish.reducers';
+import * as fromParishState from './parish/parish.reducers';
 import * as fromToolbarState from './toolbar/toolbar.reducer';
 import * as fromCommunityState from './communities/communities.reducers';
 import { ActionReducerMap } from '@ngrx/store';
-import { parishReducer } from './events/parish.reducers';
+import { parishReducer } from './parish/parish.reducers';
 import { toolbarReducer } from './toolbar/toolbar.reducer';
 import { communityReducer } from './communities/communities.reducers';
 

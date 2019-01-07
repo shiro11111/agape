@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { List } from '../models/list';
-import { ParishUtil } from '../events/shared/utils/parish.util';
+import { ParishUtil } from '../parish/shared/utils/parish.util';
 import { CommunityPost } from '../models/communityPost';
 
 @Injectable ({
