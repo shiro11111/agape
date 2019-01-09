@@ -15,6 +15,7 @@
 <!--</mat-card>-->
 <!--</ng-container>-->
 
+
 <ng-container *ngIf="(communities$ | async)">
   <mat-card *ngFor="let item of (communities$ | async)" class="mb-3">
     <div class="d-flex align-items-center">
