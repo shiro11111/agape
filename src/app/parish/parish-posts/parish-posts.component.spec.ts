@@ -44,7 +44,10 @@ describe('ParishPostsComponent', () => {
         {
           id: 1,
           createdAt: '13-12-2018',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu viverra leo. Vestibulum libero metus, blandit sit amet mattis at, convallis eget enim. Maecenas lacinia libero in odio molestie, et dapibus sem eleifend. Nullam a molestie est, ut venenatis nisl. Donec quis tempus diam. ',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu viverra leo. Vestibulum libero metus, blandit' +
+            ' sit amet mattis at, convallis eget enim. Maecenas lacinia libero in odio molestie, et dapibus sem eleifend. ' +
+            'Nullam a molestie ' +
+            'est, ut venenatis nisl. Donec quis tempus diam. ',
           parish: {
             id: 1,
             image: {
@@ -63,7 +66,9 @@ describe('ParishPostsComponent', () => {
         {
           id: 2,
           createdAt: '13-12-2018',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu viverra leo. Vestibulum libero metus, blandit sit amet mattis at, convallis eget enim. Maecenas lacinia libero in odio molestie, et dapibus sem eleifend. Nullam a molestie est, ut venenatis nisl. Donec quis tempus diam. ',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu viverra leo. Vestibulum libero metus, blandit s' +
+            'it amet mattis at, convallis eget enim. Maecenas lacinia libero in odio molestie, et dapibus sem eleifend. Nullam a molestie ' +
+            'est, ut venenatis nisl. Donec quis tempus diam. ',
           parish: {
             id: 2,
             image: {
@@ -82,7 +87,9 @@ describe('ParishPostsComponent', () => {
         {
           id: 3,
           createdAt: '13-12-2018',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu viverra leo. Vestibulum libero metus, blandit sit amet mattis at, convallis eget enim. Maecenas lacinia libero in odio molestie, et dapibus sem eleifend. Nullam a molestie est, ut venenatis nisl. Donec quis tempus diam. ',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu viverra leo. Vestibulum libero metus, blandit ' +
+            'sit amet mattis at, convallis eget enim. Maecenas lacinia libero in odio molestie, et dapibus sem eleifend. Nullam a molestie' +
+            ' est, ut venenatis nisl. Donec quis tempus diam. ',
           parish: {
             id: 3,
             image: {

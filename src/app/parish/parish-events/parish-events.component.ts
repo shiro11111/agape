@@ -34,8 +34,6 @@ export class ParishEventsComponent implements OnInit {
   }
 
   onNavigateToDetails(id: number): void {
-    console.log(id);
     this.router.navigate([`details/${id}`], {relativeTo: this.route});
   }
-
 }

@@ -3,9 +3,6 @@ import { CommunityDetailsComponent } from './community-details/community-details
 import { NgModule } from '@angular/core';
 import { CommunitiesMainComponent } from './communities-main/communities-main.component';
 
-// const routes: Routes = [
-//   { path: 'details/:id', component: CommunityDetailsComponent }
-// ];
 
 const routes: Routes = [
   { path: '',

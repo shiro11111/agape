@@ -7,6 +7,7 @@ import { Store } from '@ngrx/store';
 import { LoadPostsList } from '../parish.actions';
 import { ParishState } from '../parish.reducers';
 import { map } from 'rxjs/operators';
+import { SetToolbarContentAction } from '../../toolbar/toolbar.actions';
 
 @Component({
   selector: 'app-parish-posts',
@@ -20,6 +21,8 @@ export class ParishPostsComponent implements OnInit {
 
   ngOnInit() {
     this.store.dispatch(new LoadPostsList());
+
+    this.store.dispatch(new SetToolbarContentAction('Parafia św. Łazarza'));
 
     this.list$ = this.store.select('parishState').pipe(
       map((state: ParishState) => state && state.list));

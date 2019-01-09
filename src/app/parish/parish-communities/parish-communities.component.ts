@@ -8,6 +8,7 @@ import { map } from 'rxjs/operators';
 import { ParishState } from '../parish.reducers';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LoadCommunities } from '../parish.actions';
+import { SetToolbarContentAction } from '../../toolbar/toolbar.actions';
 
 @Component({
   selector: 'app-parish-communities',
@@ -24,6 +25,8 @@ export class ParishCommunitiesComponent implements OnInit {
 
   ngOnInit() {
     this.store.dispatch(new LoadCommunities());
+
+    this.store.dispatch(new SetToolbarContentAction('Parafia świ. Łazarza'));
 
     this.communityList$ = this.store.select('parishState').pipe(
       map((state: ParishState) => state && state.community));
