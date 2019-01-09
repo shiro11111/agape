@@ -109,3 +109,5 @@ export function parishReducer(state = initialState, action: ParishActions) {
       };
   }
 }
+
+export const getParishCommunityListState = (state: ParishState) => state.community;

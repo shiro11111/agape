@@ -18,4 +18,6 @@ export const reducers: ActionReducerMap<AppState> = {
   parishState: parishReducer,
   communityState: communityReducer,
   toolbarState: toolbarReducer
-}
+};
+
+export const getParishState = reducers.parishState;

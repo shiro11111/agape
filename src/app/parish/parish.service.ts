@@ -47,7 +47,7 @@ export class ParishService {
     ).subscribe(data => {
       console.log('normalized', data);
 
-      console.log('denormalized', denormalize(data.items.result, [parishEvent], data.items.entities));
+      console.log('denormalized', denormalize(data.items.result, [communityPost], data.items.entities));
     });
     return of(ParishUtil.getCommunityList());
   }
