@@ -20,4 +20,4 @@ export const reducers: ActionReducerMap<AppState> = {
   toolbarState: toolbarReducer
 };
 
-export const getParishState = reducers.parishState;
+export const getParishState = (state: AppState) => state.parishState;

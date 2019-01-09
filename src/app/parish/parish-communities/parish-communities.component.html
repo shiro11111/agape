@@ -2,15 +2,28 @@
 
 <!--<pre>{{communityList$ | async | json}}</pre>-->
 
-<ng-container *ngIf="(communityList$ | async)?.items">
-<mat-card *ngFor="let item of (communityList$ | async)?.items" class="mb-3">
-  <div class="d-flex align-items-center">
-    <img class="community-img"
-         [src]="'https://api-agappe.deployflex.com/' + 'image/' + item?.image?.discriminator + '/' + item?.image?.imageName + '.' + item?.image?.extension">
-    <div class="p-2">
-    <div class="font-weight-bold" (click)="onNavigateToDetails(item?.id)">{{ item.name }}</div>
-    <div>{{ item.description | truncate:[100] }}</div>
+<!--<ng-container *ngIf="(communityList$ | async)?.items">-->
+<!--<mat-card *ngFor="let item of (communityList$ | async)?.items" class="mb-3">-->
+  <!--<div class="d-flex align-items-center">-->
+    <!--<img class="community-img"-->
+         <!--[src]="'https://api-agappe.deployflex.com/' + 'image/' + item?.image?.discriminator + '/' + item?.image?.imageName + '.' + item?.image?.extension">-->
+    <!--<div class="p-2">-->
+    <!--<div class="font-weight-bold" (click)="onNavigateToDetails(item?.id)">{{ item.name }}</div>-->
+    <!--<div>{{ item.description | truncate:[100] }}</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</mat-card>-->
+<!--</ng-container>-->
+
+<ng-container *ngIf="(communities$ | async)">
+  <mat-card *ngFor="let item of (communities$ | async)" class="mb-3">
+    <div class="d-flex align-items-center">
+      <img class="community-img"
+           [src]="'https://api-agappe.deployflex.com/' + 'image/' + item?.image?.discriminator + '/' + item?.image?.imageName + '.' + item?.image?.extension">
+      <div class="p-2">
+        <div class="font-weight-bold" (click)="onNavigateToDetails(item?.id)">{{ item.name }}</div>
+        <div>{{ item.description | truncate:[100] }}</div>
+      </div>
     </div>
-  </div>
-</mat-card>
+  </mat-card>
 </ng-container>

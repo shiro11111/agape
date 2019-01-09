@@ -9,6 +9,7 @@ import { getParishCommunityListState, ParishState } from '../parish.reducers';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LoadCommunities } from '../parish.actions';
 import { SetToolbarContentAction } from '../../toolbar/toolbar.actions';
+import { communityItemsSelector, communityListCountSelector, getCommunityListImages, testSelector } from '../parish.selectors';
 
 @Component({
   selector: 'app-parish-communities',
@@ -17,6 +18,7 @@ import { SetToolbarContentAction } from '../../toolbar/toolbar.actions';
 })
 export class ParishCommunitiesComponent implements OnInit {
   communityList$: Observable<List<Community>>;
+  communities$: Observable<Community[]>;
 
   constructor(private store: Store<AppState>,
               private router: Router,
@@ -28,24 +30,14 @@ export class ParishCommunitiesComponent implements OnInit {
 
     this.store.dispatch(new SetToolbarContentAction('Parafia świ. Łazarza'));
 
-    const getState = createSelector(getParishState, getParishCommunityListState);
-
-    const communityListSelector = createSelector(
-      getState,
-      (state: List<Community>) => state && state.items as Community[]
-    );
-
-    const communityListCountSelector = createSelector(
-      getParishCommunityListState,
-      (state: List<Community>) => state && state.maxResults
-    );
-
-    this.store.pipe(select(getState)).subscribe((items) => {
+    this.store.pipe(select(testSelector)).subscribe((items) => {
       console.log(items);
     });
 
-    this.communityList$ = this.store.select('parishState').pipe(
-      map((state: ParishState) => state && state.community));
+    // this.communityList$ = this.store.select('parishState').pipe(
+    //   map((state: ParishState) => state && state.community));
+
+    this.communities$ = this.store.pipe(select(communityItemsSelector));
   }
 
   onNavigateToDetails(id: number): void {
