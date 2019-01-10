@@ -59,4 +59,8 @@ export const getLublinParishes = createSelector(
 );
 
 
+export const getEventsIds = createSelector(
+  getParishEventsState,
+  (state: List<ParishEvent>) => state && state.items.map((event: ParishEvent) => event && event.id) as number[]
+);
 

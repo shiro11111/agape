@@ -9,8 +9,7 @@ import { ParishState } from '../parish.reducers';
 import { map } from 'rxjs/operators';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SetToolbarContentAction } from '../../toolbar/toolbar.actions';
-import { parishEventsListSelector } from '../parish.selectors';
-
+import { getEventsIds, parishEventsListSelector } from '../parish.selectors';
 
 @Component({
   selector: 'app-parish-events',
@@ -20,6 +19,7 @@ import { parishEventsListSelector } from '../parish.selectors';
 export class ParishEventsComponent implements OnInit {
   eventsList$: Observable<List<ParishEvent>>;
   parishEvents$: Observable<ParishEvent[]>;
+  eventIds$: Observable<number[]>;
 
   constructor(private store: Store<AppState>,
               private router: Router,
@@ -35,9 +35,15 @@ export class ParishEventsComponent implements OnInit {
     //   map((state: ParishState) => state && state.parishEvent));
 
     this.parishEvents$ = this.store.pipe(select(parishEventsListSelector));
+
+    this.eventIds$ = this.store.pipe(select(getEventsIds));
+
+    this.eventIds$.subscribe((ids: number[]) => {
+      console.log(ids);
+    });
   }
 
   onNavigateToDetails(id: number): void {
-    this.router.navigate([`details/${id}`], {relativeTo: this.route});
+    this.router.navigate([`details/${id}`], { relativeTo: this.route });
   }
 }
