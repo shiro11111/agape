@@ -3,12 +3,13 @@ import { ParishEvent } from '../../models/parishEvent';
 import { List } from '../../models/list';
 import { Observable } from 'rxjs';
 import { AppState } from '../../app.reducers';
-import { Store } from '@ngrx/store';
+import { select, Store } from '@ngrx/store';
 import { LoadEventsList } from '../parish.actions';
 import { ParishState } from '../parish.reducers';
 import { map } from 'rxjs/operators';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SetToolbarContentAction } from '../../toolbar/toolbar.actions';
+import { parishEventsListSelector } from '../parish.selectors';
 
 
 @Component({
@@ -18,6 +19,7 @@ import { SetToolbarContentAction } from '../../toolbar/toolbar.actions';
 })
 export class ParishEventsComponent implements OnInit {
   eventsList$: Observable<List<ParishEvent>>;
+  parishEvents$: Observable<ParishEvent[]>;
 
   constructor(private store: Store<AppState>,
               private router: Router,
@@ -29,8 +31,10 @@ export class ParishEventsComponent implements OnInit {
 
     this.store.dispatch(new SetToolbarContentAction('Parafia św. Łazarza'));
 
-    this.eventsList$ = this.store.select('parishState').pipe(
-      map((state: ParishState) => state && state.parishEvent));
+    // this.eventsList$ = this.store.select('parishState').pipe(
+    //   map((state: ParishState) => state && state.parishEvent));
+
+    this.parishEvents$ = this.store.pipe(select(parishEventsListSelector));
   }
 
   onNavigateToDetails(id: number): void {

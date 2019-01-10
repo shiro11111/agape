@@ -14,6 +14,7 @@ export interface Community {
   postCity?: string;
   parish?: Parish;
   createdAt?: string;
+  parishers?: number;
   }
 
 

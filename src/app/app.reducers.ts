@@ -21,3 +21,5 @@ export const reducers: ActionReducerMap<AppState> = {
 };
 
 export const getParishState = (state: AppState) => state.parishState;
+
+export const getCommunitiesState = (state: AppState) => state.communityState;

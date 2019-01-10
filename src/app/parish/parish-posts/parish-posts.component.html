@@ -1,8 +1,8 @@
 <!--<pre>{{list$ | async | json}}</pre>-->
 
 <h3 class="p-3">Najnowsze wpisy</h3>
-<ng-container *ngIf="(list$ | async)">
-  <mat-card *ngFor="let item of (list$ | async)?.items" class="mb-3">
+<ng-container *ngIf="(parishPosts$ | async)">
+  <mat-card *ngFor="let item of (parishPosts$ | async)" class="mb-3">
     <div class="d-flex align-items-center">
       <img class="post-img"
            [src]="'https://api-agappe.deployflex.com/' + 'image/' + item?.parish?.image?.discriminator + '/' + item?.parish?.image?.imageName + '.' + item?.parish?.image?.extension">

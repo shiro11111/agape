@@ -111,3 +111,9 @@ export function parishReducer(state = initialState, action: ParishActions) {
 }
 
 export const getParishCommunityListState = (state: ParishState) => state.community;
+
+export const getParishEventsListState = (state: ParishState) => state.parishEvent;
+
+export const getParishPostsListState = (state: ParishState) => state.list;
+
+

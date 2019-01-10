@@ -9,7 +9,13 @@ import { getParishCommunityListState, ParishState } from '../parish.reducers';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LoadCommunities } from '../parish.actions';
 import { SetToolbarContentAction } from '../../toolbar/toolbar.actions';
-import { communityItemsSelector, communityListCountSelector, getCommunityListImages, testSelector } from '../parish.selectors';
+import {
+  communityItemsSelector,
+  communityListCountSelector,
+  communityParishers,
+  getCommunityListImages,
+  testSelector
+} from '../parish.selectors';
 
 @Component({
   selector: 'app-parish-communities',
@@ -19,6 +25,7 @@ import { communityItemsSelector, communityListCountSelector, getCommunityListIma
 export class ParishCommunitiesComponent implements OnInit {
   communityList$: Observable<List<Community>>;
   communities$: Observable<Community[]>;
+  parisherCount$: Observable<number>;
 
   constructor(private store: Store<AppState>,
               private router: Router,
@@ -38,6 +45,13 @@ export class ParishCommunitiesComponent implements OnInit {
     //   map((state: ParishState) => state && state.community));
 
     this.communities$ = this.store.pipe(select(communityItemsSelector));
+
+    this.parisherCount$ = this.store.pipe(select(communityParishers));
+
+    this.parisherCount$.subscribe((count: number) => {
+      console.log(count);
+    });
+
   }
 
   onNavigateToDetails(id: number): void {

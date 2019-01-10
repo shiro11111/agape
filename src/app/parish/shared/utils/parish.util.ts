@@ -112,7 +112,7 @@ export class ParishUtil {
               discriminator: 'parish'
             },
             name: 'Parafia',
-            city: 'Lublin'
+            city: 'Kraśnik Fabryczny'
           },
           community: null
         },
@@ -133,7 +133,7 @@ export class ParishUtil {
               discriminator: 'parish'
             },
             name: 'Parafia',
-            city: 'Lublin'
+            city: 'Zamość'
           },
           community: null
         }
@@ -157,11 +157,15 @@ export class ParishUtil {
             discriminator: 'parish'
           },
           name: 'Koło różańcowe',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed tellus ex. Praesent aliquet ex eget metus ' +
-            'tristique bibendum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed tellus ex. Praesent aliquet ex eget metus ' +
-            'tristique bibendumLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed tellus ex. Praesent aliquet ex eget metus ' +
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed tellus ex. Praesent aliquet ex ' +
+            'eget metus ' +
+            'tristique bibendum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed tellus ex. Praesent aliquet ex eget ' +
+            'metus ' +
+            'tristique bibendumLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed tellus ex. Praesent aliquet ex eget' +
+            ' metus ' +
             'tristique bibendum.',
-          createdAt: '14-12-2018'
+          createdAt: '14-12-2018',
+          parishers: 100
         },
         {
           id: 2,
@@ -176,7 +180,8 @@ export class ParishUtil {
           name: 'Oaza',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed tellus ex. Praesent aliquet ex eget metus' +
             ' tristique bibendum.',
-          createdAt: '14-12-2018'
+          createdAt: '14-12-2018',
+          parishers: 123
         },
         {
           id: 3,
@@ -191,7 +196,8 @@ export class ParishUtil {
           name: 'Schola młodzieżowa',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed tellus ex. Praesent aliquet ex eget metus' +
             ' Aliquam ornare sem quis lacinia elementum.',
-          createdAt: '14-12-2018'
+          createdAt: '14-12-2018',
+          parishers: 88
         }
       ]
     };

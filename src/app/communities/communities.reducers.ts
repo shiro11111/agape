@@ -31,3 +31,7 @@ export function communityReducer(state = initialState, action: CommunityActions)
       };
   }
 }
+
+export const getCommunitiesListState = (state: CommunityState) => state.communityPosts;
+
+
