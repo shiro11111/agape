@@ -72,3 +72,8 @@ export class ParishService {
   }
 }
 
+//https://hackernoon.com/what-i-have-learned-using-ngrx-redux-with-angular-2-20a748149661
+
+//https://techblog.appnexus.com/five-tips-for-working-with-redux-in-large-applications-89452af4fdcb
+
+//https://github.com/mikechabot/redux-entity
